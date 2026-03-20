@@ -171,4 +171,334 @@ If income is between 300,000 and 1,000,000, the tax rate is 10%.
 If income is above 1,000,000, the tax rate is 15%.
 Additionally, if the income is over 2,000,000, apply a special bonus of 1% on the total tax amount.
 
+============================================================================================================
+Conditional Statements
+===========================
+1. Electricity Bill Calculator (With Slabs & Surcharge)
+ Problem Statement:
+Write a Java program to calculate the monthly electricity bill based on the number of units consumed, applying the following slab rates:
+Units Consumed
+Rate per Unit
+0 - 100
+₹1.50
+101 - 200
+₹2.00
+201 - 300
+₹3.00
+Above 300
+₹5.00
 
+If the total bill exceeds ₹1000, apply a 10% surcharge.
+If the user is a senior citizen, apply an additional 5% discount on the total.
+
+Q2) 2. Online Shopping Cart Price Calculator (With Offers & Membership)
+ Problem Statement:
+Create a Java program to compute the total bill for a shopping cart. Conditions:
+
+If total amount:
+is ≥ ₹10,000, apply 20% discount
+is ≥ ₹5000, apply 10% discount
+else, no discount
+If it’s a festival season, apply an extra 5% discount.
+If the user has a premium membership, apply an additional ₹200 flat discount.
+Show total price, all applied discounts, and final payable amount.
+
+Q3)
+Question:
+Problem: Parking Fee Calculation
+A parking system calculates the fee based on the following conditions:
+
+Vehicle Type:
+Car: ₹50 per hour
+Bike: ₹30 per hour
+Truck: ₹100 per hour
+
+
+Discounts:
+If the vehicle stays for more than 5 hours, a 20% discount is applied to the total parking fee.
+
+Surcharge:
+If the vehicle is parked between 6 PM and 8 AM, a 50% surcharge is applied to the total fee.
+
+Input:
+The program should prompt the user to enter the vehicle type (Car, Bike, or Truck).
+The user should enter the arrival time (24-hour format, e.g., 14 for 2 PM).
+The user should also enter the departure time (24-hour format, e.g., 18 for 6 PM).
+
+
+Output:
+The program should output the total parking fee based on the conditions above.
+
+Constraints:
+Assume that the parking times are in a 24-hour format.
+Handle cases where parking times cross midnight (e.g., a vehicle parked from 10 PM to 2 AM).
+For vehicles staying for more than 5 hours, apply the 20% discount.
+For vehicles parked between 6 PM and 8 AM, apply the 50% surcharge.
+
+
+Example:
+Input:
+Enter the vehicle type (Car, Bike, Truck): car
+Enter the time of arrival (24-hour format, e.g., 14 for 2 PM): 14
+Enter the time of departure (24-hour format, e.g., 18 for 6 PM): 20
+
+Output:
+Total parking fee: ₹300.0
+
+
+Q4)
+Employee Salary and Bonus Calculation
+Problem:
+An employee’s salary is calculated based on their performance, years of experience,
+ and whether they are eligible for a bonus. The rules for the calculation are:
+Base Salary:
+Junior (Less than 2 years): ₹30,000
+Mid-level (2 to 5 years): ₹50,000
+Senior (More than 5 years): ₹70,000
+
+
+Bonus:
+Employees with a performance score of 8 or above get a 10% bonus on their salary.
+
+Q5)Question:
+Write a Java program to calculate the tax percentage based on income using nested if–else statements.
+ The program should read an integer income and determine the tax percentage as per the rules below:
+Income Range (₹)       Tax Percentage
+≤ 10,000                0%
+10,001 – 50,000         10%
+50,001 – 100,000        20%
+> 100,000               30%
+
+
+Test Case 1:
+Input:
+5000
+Output:
+0%
+
+
+Test Case 2:
+Input:
+20000
+Output:
+10%
+
+
+Test Case 3:
+Input:
+75000
+Output:
+20%
+
+
+Test Case 4:
+Input:
+120000
+Output:
+30%
+
+
+Test Case 5:
+Input:
+10000
+Output:
+0%
+
+Question 6)
+Write a Java program to simulate traffic light behavior using nested if–else statements.
+
+ The program should take:
+A light state (Green, Yellow, or Red)
+The hour (0–23 in 24-hour format)
+ and display the vehicle’s action based on these rules:
+
+If the light is Green, the action is “Go”.
+If the light is Red, the action is “Stop”.
+
+If the light is Yellow:
+During daytime (6 AM to 6 PM) → “Slow”
+During nighttime → “Stop”
+
+
+Test Case 1:
+Input:
+Green 10
+Output:
+Go
+
+
+Test Case 2:
+Input:
+Red 15
+Output:
+Stop
+
+
+Test Case 3:
+Input:
+Yellow 9
+Output:
+Slow
+
+
+Test Case 4:
+Input:
+Yellow 20
+Output:
+Stop
+
+
+Test Case 5:
+Input:
+Green 23
+Output:
+Go
+
+
+Question7)
+Question:
+Write a Java program to calculate and classify a person’s Body Mass Index (BMI) using nested if–else statements.
+ The program should:
+
+Take weight (in kilograms) and height (in meters) as input.
+Compute BMI = weight / (height × height).
+
+
+Display the category based on the following table:
+BMI Range           Category
+< 18.5            Underweight
+18.5 – 24.9        Normal
+25.0 – 29.9       Overweight
+≥ 30.0             Obese
+
+Test Case 1:
+Input:
+45 1.65
+Output:
+BMI: 16.53
+Category: Underweight
+
+
+Test Case 2:
+Input:
+70 1.75
+Output:
+BMI: 22.86
+Category: Normal
+
+
+Test Case 3:
+Input:
+85 1.70
+Output:
+BMI: 29.41
+Category: Overweight
+
+
+Test Case 4:
+Input:
+95 1.60
+Output:
+BMI: 37.11
+Category: Obese
+
+
+Test Case 5 (Edge case - BMI = 18.5):
+Input:
+56 1.75
+Output:
+BMI: 18.29
+Category: Underweight
+
+
+Test Case 6 (Edge case - BMI = 24.9):
+Input:
+76 1.75
+Output:
+BMI: 24.82
+Category: Normal
+
+
+Question 8):
+Write a Java program to check whether a given number is a Perfect Square using nested if–else statements.
+ A number n is said to be a Perfect Square if there exists an integer x such that x × x = n.
+
+Test Case 1:
+Input:
+16
+Output:
+Perfect Square
+
+
+Test Case 2:
+Input:
+12
+Output:
+Not Perfect Square
+
+
+Test Case 3:
+Input:
+0
+Output:
+Perfect Square
+
+
+Test Case 4:
+Input:
+25
+Output:
+Perfect Square
+
+
+Test Case 5:
+Input:
+-9
+Output:
+Not Perfect Square'
+
+The Question 9)
+A geometry app classifies a quadrilateral based on four side lengths ($a, b, c, d$) and whether opposite sides are equal.
+Output "Rectangle" if opposite sides are equal ($a=c$ and $b=d$).
+Output "Square" if all sides are equal.
+Output "Other" otherwise.
+Input Format: Four integers a,b,c,d, separated by spaces.
+Output Format: A string: "Square", "Rectangle", or "Other".
+Example:
+Input: 4 4 4 4
+Output: Square
+
+
+Test Case 1:
+Input:
+4 4 4 4
+Output:
+Square
+
+
+Test Case 2:
+Input:
+4 6 4 6
+Output:
+Rectangle
+
+
+Test Case 3:
+Input:
+3 4 5 6
+Output:
+Other
+
+
+Test Case 4:
+Input:
+5 5 5 5
+Output:
+Square
+
+
+Test Case 5:
+Input:
+2 3 2 3
+Output:
+Rectangle
