@@ -502,3 +502,126 @@ Input:
 2 3 2 3
 Output:
 Rectangle
+=============================================================================================================
+Day-4
+=========
+Q1)Problem Statement:
+A library system calculates fines based on days overdue:
+•	Code 1: 1–5 days → $1/day
+•	Code 2: 6–10 days → $2/day
+•	Code 3: >10 days → $5/day
+The user inputs a code and days overdue, and the program outputs the total fine or "Invalid Code".
+
+Input Format:
+Two integers: code and days, separated by a space.
+
+Output Format:
+An integer (total fine) or the string "Invalid Code
+
+Example
+•	Input: 1 3
+•	Output: 3
+
+Constraints:
+•	1 ≤ code ≤ 3
+•	1 ≤ days ≤ 30
+•	Use a switch statement
+
+Question2)Problem Statement:
+A company awards bonuses based on employee role:
+•	Role Code 1 (Manager): 10% of salary
+•	Role Code 2 (Developer): 5% of salary
+•	Role Code 3 (Intern): $500 flat bonus
+The user inputs a role code and salary, and the program outputs the bonus amount or "Invalid Role".
+
+Input Format:
+Two integers: code and salary, separated by a space.
+
+Output Format:
+An integer (bonus amount) or the string "Invalid Role".
+
+Example:
+•	Input: 1 50000
+•	Output: 5000
+
+Constraints:
+•	1 ≤ code ≤ 3
+•	1000 ≤ salary ≤ 100000
+•	Use a switch statement
+
+
+Question3)Problem Statement:
+A hotel system prices rooms based on type and season:
+•	Room Types:
+o	1: Standard
+o	2: Deluxe
+•	Seasons:
+o	1: Peak
+o	2: Off-Peak
+•	Prices:
+o	Standard Room:
+	Peak → $100
+	Off-Peak → $80
+o	Deluxe Room:
+	Peak → $200
+	Off-Peak → $150
+
+Input Format:
+Two integers: room and season, separated by a space.
+Output Format:
+One of:
+"$100", "$80", "$200", "$150", or "Invalid Input"
+
+Example:
+•	Input: 1 1
+•	Output: $100
+
+Constraints:
+•	1 ≤ room ≤ 2
+•	1 ≤ season ≤ 2
+•	Use a switch statement for room type
+
+Question4)QUESTION (Problem Statement)
+A tax calculator applies rates based on region:
+•	1 for North: 5%
+•	2 for South: 6%
+•	3 for East: 7%
+•	4 for West: 8%
+The user provides a region code and income, and the program calculates the tax based on the region’s percentage rate. If the region code is not between 1 and 4, the output should be "Invalid Region".
+ 
+ Input Format:
+Two integers — code and income, separated by a space.
+
+ Output Format:
+Print an integer (tax amount) or the string "Invalid Region"
+
+ Constraints:
+•	1 ≤ code ≤ 4
+•	0 ≤ income ≤ 1,000,000
+•	Use a switch statement
+
+
+Question5) (Weather Alert System)
+A weather app issues alerts based on:
+•	Condition code:
+.	1 = Sunny
+.	2 = Rainy
+.	3 = Stormy
+•	Temperature (in °C):
+.	If condition is Stormy and temperature < 10°C, print "Severe Warning"
+.	Otherwise, print the condition name.
+.	If the code is not 1–3, print "Invalid Condition".
+
+🔹 Input Format:
+Two integers:
+code (1 to 3) and temp (−20 to 50), separated by space.
+
+🔹 Output Format:
+A single string:
+"Sunny", "Rainy", "Stormy", "Severe Warning", or "Invalid Condition"
+
+ Example Input:
+1 20
+
+Example Output:
+Sunny
