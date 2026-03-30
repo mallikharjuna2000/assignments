@@ -811,3 +811,1219 @@ Input: 25
 Input: 7
 7² = 49 → does not end with 7 
  Not Automorphic
+
+ ==========================================================================================================
+ Arrays
+ ---------
+ 1. Print All Elements of an Array
+ Problem Statement
+Write a Java program to print all elements of an array.
+
+Input Format
+The first line contains an integer n, the size of the array.
+The next n lines each contain one integer — the array elements.
+
+
+ Output Format
+Print each element of the array on a new line.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+
+Sample Test Cases
+ Test Case 1
+Input
+3
+1
+2
+3
+Output
+1
+2
+3
+Explanation:
+ Array = [1, 2, 3]; all elements are printed one by one.
+
+Test Case 2
+Input
+2
+5
+10
+Output
+5
+10
+Explanation:
+ Array of size 2 → prints both values.
+
+Test Case 3
+Input
+4
+9
+8
+7
+6
+Output
+9
+8
+7
+6
+Explanation:
+ Each element printed on its own line.
+---------------------------------------------------------------------------------------------------
+2. Sum of All Elements in an Array
+ Problem Statement
+Write a program to calculate and print the sum of all elements in an array.
+
+Input Format
+First line: integer n, the number of elements.
+Next n lines: each line contains one integer (the array elements).
+
+
+ Output Format
+Print a single integer — the sum of all elements.
+
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+
+Sample Test Cases
+ Test Case 1
+Input
+4
+1
+2
+3
+4
+Output
+10
+Explanation:
+ 1 + 2 + 3 + 4 = 10
+
+Test Case 2
+Input
+3
+5
+0
+2
+Output
+7
+Explanation:
+ Sum = 5 + 0 + 2 = 7
+
+Test Case 3
+Input
+5
+-2
+3
+0
+4
+-1
+Output
+4
+Explanation:
+ Sum = -2 + 3 + 0 + 4 + (-1) = 4
+----------------------------------------------------------------------------------------------
+3. Find Maximum Element in an Array
+ Problem Statement
+Write a program to find and print the maximum element in an array.
+
+Input Format
+First line: integer n — size of array
+Next n lines: integers — array elements
+
+
+ Output Format
+Print the maximum element.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+5
+3
+7
+2
+9
+4
+Output
+9
+Explanation:
+ The largest value in the array is 9.
+
+Test Case 2
+Input
+3
+1
+5
+2
+Output
+5
+Explanation:
+ Maximum = 5.
+
+Test Case 3
+Input
+4
+-1
+-5
+-2
+-3
+Output
+-1
+Explanation:
+ Among negatives, -1 is the highest (closest to zero).
+--------------------------------------------------------------------------------------------------------------
+ 4. Find Minimum Element in an Array
+ Problem Statement
+Write a program to find and print the minimum element in an array.
+
+Input Format
+First line: integer n, size of the array
+Next n lines: integers — array elements
+
+
+ Output Format
+Print the minimum element.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+4
+5
+2
+8
+1
+Output
+1
+Explanation:
+ Smallest value is 1.
+
+Test Case 2
+Input
+3
+7
+4
+9
+Output
+4
+Explanation:
+ Minimum = 4.
+
+Test Case 3
+Input
+5
+-3
+-7
+-1
+-5
+-2
+Output
+-7
+Explanation:
+ Among negatives, -7 is the smallest.
+------------------------------------------------------------------------------------------------
+ 5. Count Number of Even Elements in an Array
+ Problem Statement
+Write a program to count and print the number of even elements in an array.
+
+Input Format
+First line: integer n, number of elements
+Next n lines: integers — array elements
+
+
+ Output Format
+Print one integer — count of even elements.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+5
+1
+2
+3
+4
+6
+Output
+3
+Explanation:
+ Even numbers are 2, 4, 6 → count = 3.
+
+Test Case 2
+Input
+3
+7
+9
+11
+Output
+0
+Explanation:
+ No even numbers → count = 0.
+
+Test Case 3
+Input
+4
+-2
+-3
+-4
+-5
+Output
+2
+Explanation:
+ Even numbers are -2 and -4 → count = 2.
+-----------------------------------------------------------------------------------------
+6 Print Array Elements in Reverse Order
+ Problem Statement
+Write a program to print the elements of an array in reverse order.
+
+Input Format
+First line: integer n, size of array
+Next n lines: array elements
+
+
+ Output Format
+Print all array elements in reverse order, one per line.
+
+
+
+Sample Test Cases
+ Test Case 1
+Input
+4
+1
+2
+3
+4
+
+Output
+4
+3
+2
+1
+
+Explanation:
+ Original array = [1, 2, 3, 4]; printed backwards.
+
+Test Case 2
+Input
+3
+5
+6
+7
+Output
+7
+6
+5
+Explanation:
+ Reverse of [5, 6, 7] is [7, 6, 5].
+
+Test Case 3
+Input
+5
+-1
+-2
+-3
+-4
+-5
+Output
+-5
+-4
+-3
+-2
+-1
+Explanation:
+ Reverse order of negatives printed.
+----------------------------------------------------------------------------------------
+7. Product of All Elements in an Array
+ Problem Statement
+Write a program to calculate and print the product of all elements in an array.
+
+Input Format
+First line: integer n, array size
+Next n lines: integers (array elements)
+
+
+ Output Format
+Print a single integer — the product of all elements.
+
+
+Sample Test Cases
+ Test Case 1
+Input
+3
+2
+3
+4
+Output
+24
+Explanation:
+ Product = 2 × 3 × 4 = 24.
+
+Test Case 2
+Input
+2
+5
+6
+Output
+30
+Explanation:
+ 5 × 6 = 30.
+
+Test Case 3
+Input
+5
+1
+2
+0
+4
+3
+Output
+0
+Explanation:
+ Any multiplication with 0 results in 0.
+-----------------------------------------------------------------------------------
+8. Count Positive Numbers in an Array
+ Problem Statement
+Write a program to count and print how many elements are positive in an array.
+Input Format
+First line: integer n, array size
+Next n lines: integers — array elements
+
+
+ Output Format
+Print count of positive numbers.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+5
+-1
+2
+6
+3
+-4
+Output
+3
+Explanation:
+ Positives = 2, 6, 3 → count = 3.
+
+Test Case 2
+Input
+3
+-5
+-2
+-1
+Output
+0
+Explanation:
+ All are negative → 0 positive numbers.
+
+Test Case 3
+Input
+4
+-2
+-3
+5
+-7
+Output
+1
+Explanation:
+ Only 5 is positive.
+----------------------------------------------------------------------------------
+9. Print the Last Element of an Array
+ Problem Statement
+Write a program to print the last element of an array.
+
+Input Format
+First line: integer n, array size
+Next n lines: integers (array elements)
+
+
+ Output Format
+Print the last element of the array.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+4
+1
+2
+3
+4
+Output
+4
+Explanation:
+ Last element = 4.
+
+Test Case 2
+Input
+3
+5
+6
+7
+Output
+7
+Explanation:
+ Last element = 7.
+
+Test Case 3
+Input
+5
+-1
+-2
+-3
+-4
+-5
+Output
+-5
+Explanation:
+ Last value = -5.
+
+---------------------------------------------------------------------------------------------------
+10. Print the First Element of an Array
+ Problem Statement
+Write a program to print the first element of an array.
+
+Input Format
+First line: integer n, array size
+Next n lines: array elements
+
+
+ Output Format
+Print the first element of the array.
+
+
+Constraints
+1 ≤ n ≤ 100
+-10^6 ≤ arr[i] ≤ 10^6
+
+Sample Test Cases
+ Test Case 1
+Input
+3
+5
+6
+7
+Output
+5
+Explanation:
+ First element = 5.
+
+Test Case 2
+Input
+2
+1
+2
+Output
+1
+Explanation:
+ First number of array = 1.
+
+Test Case 3
+Input
+4
+-10
+-5
+-2
+-1
+Output
+-10
+Explanation:
+ First element = -10.
+---------------------------------------------------------------------
+Question 11: Count elements greater than zero
+ Problem Statement
+Write a program to count and print the number of elements greater than zero in an array.
+Input Format
+First line: Integer n (size of the array)
+Next n lines: Each line contains one integer (array element)
+
+
+ Output Format
+Print a single integer — the count of elements greater than zero
+
+
+
+Sample Test Cases
+Test Case 1
+Input:
+5
+-2
+0
+3
+4
+-1
+Output:
+2
+Explanation:
+ Only 3 and 4 are greater than 0 → count = 2
+
+Test Case 2
+Input:
+3
+0
+-1
+-2
+Output:
+0
+Explanation:
+ No positive numbers → count = 0
+
+Test Case 3
+Input:
+4
+-5
+6
+2
+0
+Output:
+2
+Explanation:
+ Positive numbers are 6 and 2 → count = 2
+ -----------------------------------------------------------------------------------
+  Question 12: Print all odd numbers
+ Problem Statement
+Write a program to print all odd numbers from an array.
+
+Input Format
+First line: Integer n
+Next n lines: Array elements
+
+
+ Output Format
+Print each odd number in a new line
+
+
+Sample Test Cases
+Test Case 1
+Input:
+5
+1
+2
+3
+4
+5
+Output:
+1
+3
+5
+Explanation: Odd numbers are 1, 3, and 5.
+
+Test Case 2
+Input:
+3
+0
+1
+2
+Output:
+1
+Explanation: Only 1 is odd.
+
+Test Case 3
+Input:
+4
+-2
+-3
+-4
+-5
+Output:
+-3
+-5
+Explanation: Negative odd numbers -3, -5 are printed.
+-----------------------------------------------------------------------------------------------
+Question 13: Sum of all even numbers
+ Problem Statement
+Write a program to calculate and print the sum of all even numbers in an array.
+Input Format
+First line: Integer n
+Next n lines: Array elements
+
+
+ Output Format
+Print a single integer — the sum of even numbers
+
+
+
+Sample Test Cases
+Test Case 1
+Input:
+5
+1
+2
+3
+4
+6
+Output:
+12
+Explanation: 2 + 4 + 6 = 12
+
+Test Case 2
+Input:
+3
+1
+2
+5
+Output:
+2
+Explanation: Only one even number 2
+
+Test Case 3
+Input:
+4
+-4
+-3
+-2
+-1
+Output:
+-6
+Explanation: -4 + -2 = -6
+-------------------------------------------------------------------------------------------------
+Question 14: Difference between max and min
+ Problem Statement
+Write a program to calculate and print the difference between the maximum and minimum elements in an array.
+
+Input Format
+First line: Integer n
+Next n lines: Array elements
+
+
+ Output Format
+Print a single integer — difference between max and min
+
+
+
+Sample Test Cases
+Test Case 1
+Input:
+4
+5
+2
+8
+1
+Output:
+7
+Explanation: max = 8, min = 1, difference = 8 - 1 = 7
+
+Test Case 2
+Input:
+3
+7
+4
+9
+Output:
+5
+Explanation: max = 9, min = 4, difference = 5
+
+Test Case 3
+Input:
+5
+5
+5
+5
+5
+5
+Output:
+0
+Explanation: All equal → max = min → difference = 0
+---------------------------------------------------------------------------------------------------
+ Question 15: Elements greater than average
+ Problem Statement
+Write a program to print all elements greater than the average of the array.
+
+ Input Format
+First line: Integer n
+
+
+Next n lines: Array elements
+
+
+ Output Format
+Print each element greater than the average in a new line
+
+
+Sample Test Cases
+Test Case 1
+Input:
+5
+1
+2
+3
+4
+5
+Output:
+4
+5
+Explanation: Average = 3 → elements > 3 are 4, 5
+
+Test Case 2
+Input:
+3
+2
+4
+6
+Output:
+4
+6
+Explanation: Average = 4 → numbers > 4 → 6 only
+
+Test Case 3
+Input:
+4
+-1
+0
+3
+5
+Output:
+3
+5
+Explanation: Average = 1.75 → greater elements are 3, 5
+-----------------------------------------------------------------------------------------------------
+16)
+Problem Title: Water Usage Adjustment System – Aquaville City
+Scenario (Question)
+In the city of Aquaville, the municipal water system monitors the daily water usage at different stations, represented as an array.
+During maintenance periods, adjustments are made to the water usage records by adding or subtracting a given value across a range of stations.
+ However, water usage at any station can never become negative — if an operation would reduce a station’s usage below zero, it should be reset to 0.
+You must simulate all the maintenance adjustments and display the final water usage at all stations after all operations.
+
+Input Format
+First line: Two integers —
+N → Number of stations (array size)
+Q → Number of queries (maintenance operations)
+Second line: N integers — initial water usage of each station.
+Next Q lines: Each line has three integers L, R, X
+L = starting index (1-based)
+R = ending index (1-based)
+X = adjustment value (positive for addition, negative for subtraction)
+
+
+
+Output Format
+Print N integers — the final water usage at each station after all queries,
+ ensuring that no station has a negative value.
+Constraints
+1 ≤ N, Q ≤ 1000
+
+Example Input
+5 2
+10 20 30 40 50
+1 3 -5
+2 4 10
+Example Output
+5 25 35 50 50
+
+Explanation
+1️ Query 1: Subtract 5 from stations 1–3
+ Initial → [10, 20, 30, 40, 50]
+ After Query 1 → [5, 15, 25, 40, 50]
+2️ Query 2: Add 10 from stations 2–4
+ After Query 2 → [5, 25, 35, 50, 50]
+ Final Output → 5 25 35 50 50
+
+Test Cases
+ Test Case 1
+Input
+5 2
+10 20 30 40 50
+1 3 -5
+2 4 10
+Output
+5 25 35 50 50
+Explanation:
+ Subtract 5 (1–3): [5,15,25,40,50]
+ Add 10 (2–4): [5,25,35,50,50]
+
+ Test Case 2
+Input
+4 3
+5 10 15 20
+1 2 -10
+2 3 5
+3 4 -20
+Output
+0 5 0 0
+Explanation:
+ 1️ Subtract 10 (1–2): [0,0,15,20]
+ 2️ Add 5 (2–3): [0,5,20,20]
+ 3️ Subtract 20 (3–4): [0,5,0,0]
+
+ Test Case 3
+Input
+6 2
+8 12 10 5 15 20
+3 6 -8
+1 4 5
+Output
+13 17 7 2 7 12
+Explanation:
+ 1️ Subtract 8 (3–6): [8,12,2,0,7,12]
+ 2️ Add 5 (1–4): [13,17,7,5,7,12] → But (station 4) 5 is correct since no negative applied.
+
+ Test Case 4
+Input
+5 1
+3 0 2 4 1
+2 5 -3
+Output
+3 0 0 1 0
+Explanation:
+ Subtract 3 (2–5): [3,-3,-1,1,-2] → [3,0,0,1,0]
+
+ Test Case 5
+Input
+5 3
+100 200 300 400 500
+1 5 -50
+3 5 -400
+2 4 100
+Output
+50 250 0 100 100
+Explanation:
+ 1️ Subtract 50 (1–5): [50,150,250,350,450]
+ 2️ Subtract 400 (3–5): [50,150,0,0,50]
+ 3️ Add 100 (2–4): [50,250,100,100,50]
+--------------------------------------------------------------------------------------
+Question: MusicFest Ticket Rotation
+Problem Statement:
+In the grand MusicFest, a row of seats is allocated tickets with specific values (representing ticket types) in an array.
+The organizer wants to reallocate tickets in specific ranges by rotating the values to the left.
+For example:
+ If [1, 2, 3] is rotated left by 1, it becomes [2, 3, 1].
+You need to write a program that:
+Processes multiple rotation queries.
+
+
+Each query defines:
+
+
+The start and end range of seats.
+
+
+The number of left rotations.
+
+
+Finally, print the updated ticket arrangement after all queries.
+
+
+Input Format:
+The first line contains two integers —
+ N → number of seats (array size)
+ Q → number of rotation queries
+The second line contains N integers — the initial ticket values.
+The next Q lines each contain three integers:
+L → start index (1-based)
+R → end index (1-based)
+K → number of left rotations to apply within that range
+
+
+
+Output Format:
+Print N integers — the final ticket values after all rotation queries.
+Example Input:
+5 2
+1 2 3 4 5
+1 3 1
+2 4 2
+Example Output:
+2 4 3 1 5
+
+Explanation:
+Initial: [1, 2, 3, 4, 5]
+
+Query 1 → Rotate elements from index 1 to 3 left by 1 → [2, 3, 1, 4, 5]
+Query 2 → Rotate elements from index 2 to 4 left by 2 → [2, 4, 3, 1, 5]
+Final Output → 2 4 3 1 5
+
+
+Sample Test Cases
+ Test Case 1
+Input:
+5 2
+1 2 3 4 5
+1 3 1
+2 4 2
+Output:
+2 4 3 1 5
+
+Explanation:
+Rotate [1,2,3] → [2,3,1]
+Then rotate [3,1,4] → [4,3,1]
+ Final: [2,4,3,1,5]
+
+
+
+Test Case 2
+Input:
+6 1
+10 20 30 40 50 60
+2 5 3
+Output:
+10 40 50 60 20 60
+Explanation:
+ Range [20, 30, 40, 50] rotated left by 3 → [50, 20, 30, 40]
+ Final array → [10, 50, 20, 30, 40, 60]
+
+ Test Case 3
+Input:
+4 3
+5 10 15 20
+1 4 1
+2 3 1
+1 2 2
+output:
+10 15 20 5
+Explanation:
+Rotate [5,10,15,20] → [10,15,20,5]
+
+
+Rotate [15,20] → [20,15] → [10,20,15,5]
+
+
+Rotate [10,20] by 2 → no change (full cycle).
+Final: [10,15,20,5]
+
+ Test Case 4
+Input:
+5 2
+9 8 7 6 5
+1 5 2
+2 4 1
+Output:
+7 6 8 5 9
+Explanation:
+Rotate [9,8,7,6,5] left by 2 → [7,6,5,9,8]
+Rotate [6,5,9] left by 1 → [5,9,6]
+ Final: [7,5,9,6,8]
+---------------------------------------------------------------------------------------------------
+18)
+Question: Library Fine Calculation
+Problem Statement:
+In the Bookhaven Library, daily overdue fines are recorded in an array — each element representing the fine for a specific book.
+The librarian wants to calculate the total fine for specific ranges of books, but with a limit:
+If the total fine in a range exceeds a given threshold (T), it should be capped at that threshold.
+You must write a program that:
+Processes multiple fine calculation queries.
+
+
+Each query specifies a book range (L to R) and a threshold (T).
+
+
+Outputs the total fine for that range — capped at the threshold value.
+
+
+Input Format:
+The first line contains two integers —
+ N → number of books (array size)
+ Q → number of queries
+
+
+The second line contains N integers — daily fines for each book.
+
+
+The next Q lines each contain three integers:
+L → start index (1-based)
+R → end index (1-based)
+T → threshold (maximum allowable total fine)
+Output Format:
+For each query, print a single integer —
+ the total fine for the given range, capped at T if necessary.
+Example Input:
+5 2
+10 20 30 40 50
+1 3 50
+2 4 100
+Example Output:
+50
+90
+Explanation:
+Query 1:
+ Range (1–3) → 10 + 20 + 30 = 60 → exceeds threshold (50) → output 50
+
+
+Query 2:
+ Range (2–4) → 20 + 30 + 40 = 90 → less than threshold (100) → output 90
+Sample Test Cases
+Test Case 1
+Input:
+5 2
+10 20 30 40 50
+1 3 50
+2 4 100
+
+Output:
+50
+90
+Explanation:
+(1–3): 10 + 20 + 30 = 60 → exceeds 50 → capped to 50
+(2–4): 20 + 30 + 40 = 90 → within 100 → 90
+
+
+ Test Case 2
+Input:
+6 3
+5 15 25 35 45 55
+1 4 60
+3 6 100
+2 5 80
+
+Output:
+60
+100
+80
+
+Explanation:
+(1–4): 5+15+25+35=80 → exceeds 60 → output 60
+(3–6): 25+35+45+55=160 → exceeds 100 → output 100
+(2–5): 15+25+35+45=120 → exceeds 80 → output 80
+
+
+ Test Case 3
+Input:
+4 2
+12 8 10 5
+1 2 30
+2 4 20
+
+Output:
+20
+20
+
+Explanation:
+(1–2): 12 + 8 = 20 → within threshold 30 → 20
+(2–4): 8 + 10 + 5 = 23 → exceeds 20 → capped to 20
+
+
+
+ Test Case 4
+Input:
+5 2
+0 0 10 20 30
+3 5 100
+1 2 5
+
+Output:
+60
+0
+
+Explanation:
+(3–5): 10 + 20 + 30 = 60 → less than 100 → 60
+(1–2): 0 + 0 = 0 → within 5 → 0
+------------------------------------------------------------------------------------------------
+19)
+StoreMax Stock Balancing
+Problem Statement:
+In the StoreMax warehouse, stock levels of items are recorded in an array.
+To balance stock across sections, the manager wants to equalize stock in specific ranges by setting all values in the range to the median of that range:
+Odd-length range: use the middle element after sorting.
+Even-length range: use the lower middle (element at index (length - 1) / 2 after sorting).
+
+
+You must write a program that:
+Processes multiple balancing queries.
+Outputs the final stock levels after all queries.
+
+
+Input Format:
+First line: Two integers
+N → number of items (array size)
+Q → number of queries
+Second line: N integers — initial stock levels of each item.
+Next Q lines: Two integers L and R (1-based indices) representing the range for each query.
+
+
+Output Format:
+Print N integers — the final stock levels after all balancing queries.
+Constraints:
+1 ≤ N, Q ≤ 1000
+
+Example Input:
+5 2
+10 50 30 20 40
+1 3
+2 5
+Example Output:
+30 30 30 30 30
+
+Explanation (Step-by-Step):
+Initial array: [10, 50, 30, 20, 40]
+Query 1: 1–3 → subarray [10,50,30] → sorted [10,30,50] → median = 30
+Update positions 1–3 → [30,30,30,20,40]
+Query 2: 2–5 → subarray [30,30,20,40] → sorted [20,30,30,40] → median = 30
+Update positions 2–5 → [30,30,30,30,30]
+ Final array: [30,30,30,30,30]
+Sample Test Cases
+ Test Case 1
+Input:
+5 2
+10 50 30 20 40
+1 3
+2 5
+Output:
+30 30 30 30 30
+Explanation:
+Query1 → median 30 → [30,30,30,20,40]
+Query2 → median 30 → [30,30,30,30,30]
+
+
+ Test Case 2
+Input:
+6 2
+5 15 25 10 20 30
+1 4
+3 6
+Output:
+10 10 20 20 20 20
+Explanation:
+Query1 → subarray [5,15,25,10] → sorted [5,10,15,25] → median = 10 → update → [10,10,10,10,20,30]
+Query2 → subarray [10,10,20,30] → sorted [10,10,20,30] → median = 20 → update → [10,10,20,20,20,20]
+
+
+ Test Case 3
+Input:
+4 1
+8 4 12 6
+1 4
+Output:
+6 6 6 6
+Explanation:
+Query → subarray [8,4,12,6] → sorted [4,6,8,12] → median = 6 → update all → [6,6,6,6]
+
+
+ Test Case 4
+Input:
+7 3
+1 7 3 9 5 2 8
+1 3
+4 7
+2 5
+Output:
+3 3 3 5 5 5 5
