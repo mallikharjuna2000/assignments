@@ -2027,3 +2027,14 @@ Input:
 2 5
 Output:
 3 3 3 5 5 5 5
+Day-12 Multi-Dimessional Array Examples Programs
+====================================================
+1. Read and Print a 2D Array
+2. Sum of All Elements in 2D Array.
+3. Row-wise Sum in 2D Array.
+4. Column-wise Sumin 2D Array.
+5. Transpose of a Matrix
+Switch rows with columns)
+6. Multiply Two Matrices 
+7. Java Program to Add Two Matrices
+8.Java Program for Row-wise and Column-wise Product
