@@ -2038,3 +2038,49 @@ Switch rows with columns)
 6. Multiply Two Matrices 
 7. Java Program to Add Two Matrices
 8.Java Program for Row-wise and Column-wise Product
+
+Day-13 Petterns Examples-1
+=========================
+Question1) Print the below pattern
+ * * * *
+   * * *
+     * *
+       *
+
+Question-2) Print squareHollowPattern
+
+******
+*    *
+*    *
+*    *
+*    *
+******
+
+Question3) print below numeric Pattern
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+16 17 18 19 20 21
+
+Question-4) Zero-One Triangle Pattern
+
+1
+0 1
+1 0 1
+0 1 0 1
+1 0 1 0 1
+0 1 0 1 0 1
+
+Question-5) Right Pascal’s Triangle
+Forms a right-angled triangle pointing upward and downward, creating a right Pascal’s triangle shape.
+
+
+*
+* *
+* * *
+* * * *
+* * *
+* *
+*
