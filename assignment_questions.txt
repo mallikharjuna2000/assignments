@@ -2084,3 +2084,53 @@ Forms a right-angled triangle pointing upward and downward, creating a right Pas
 * * *
 * *
 *
+
+
+Day-14 patterns
+===================
+Question1) print the below Square Hollow Pattern
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+
+Question2) print Diamond Hollow Pattern
+   *
+   * *
+  *   *
+ *     *
+*       *
+*         *
+*       *
+ *     *
+  *   *
+   * *
+    *
+Question-3) Print Pyramid Hollow Pattern
+       *
+     *   *
+   *       *
+ *           *
+* * * * * * * *
+
+Question-4) Square Pattern of Alphabetical Characters
+ABCD
+EFGH
+IJKL
+MNOP
+
+ Question-5) Floyd's Triangle (Letters)
+A
+BC
+DEF
+GHIJ
+KLMNO
+
+Question-6) Number Triangle Pattern
+     1 
+    2 2 
+   3 3 3 
+  4 4 4 4 
+ 5 5 5 5 5 
+6 6 6 6 6 6 
