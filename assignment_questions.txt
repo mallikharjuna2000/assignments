@@ -3789,3 +3789,1085 @@ found
 Explanation:
  Adjacent pair (15, 20) gives sum 35 → "found".
  =============================================================================================
+ Day-22 Overloading
+=====================
+ Question-1):
+
+ You are required to implement a simple Bank Account System using Java. The bank allows customers to deposit money in different ways:
+By cash
+By cheque (requires cheque number)
+By online transfer (requires transaction ID and bank name)
+
+
+ Instructions:
+Create a class named BankAccount with the following:
+A data member balance (double) to hold the account balance.
+A constructor to initialize the balance with an opening amount.
+
+
+Overload the deposit() method in three different forms:
+One takes only the amount (cash).
+One takes amount and cheque number.
+One takes amount, transaction ID, and bank name.
+Include a method showBalance() to display the current account balance.
+
+
+In the main() method:
+Create an object of BankAccount with an initial balance of ₹5000.
+Call all three overloaded deposit() methods.
+Display the final balance using showBalance().
+-------------------------------------------------------------------------------------------------------------
+
+Question-2)
+ Problem Statement:
+Create a Java class called Product that represents a product in an online or physical store. Each product has the following properties:
+productId (int)
+productName (String)
+price (double)
+quantity (int)
+
+
+
+🛠 Functional Requirements:
+1. Constructors
+Create two constructors:
+One that accepts all fields (productId, productName, price, quantity)
+Another that accepts only productId and productName, and initializes price to 0.0 and quantity to 1.
+
+
+2. Method Overloading
+Create two overloaded methods named updateQuantity():
+updateQuantity(int quantity) → Sets the product quantity.
+updateQuantity(int quantity, boolean add) → Adds to the current quantity if add is true, else replaces it.
+
+
+3. Inventory Actions
+addStock(int qty) → Adds given quantity to stock (like deposit).
+removeStock(int qty) → Removes quantity from stock, only if available (like withdrawal).
+
+
+4. Discount Logic (Auto Applied)
+Based on current stock quantity, apply discount:
+If quantity >= 6 → 15% discount
+If quantity >= 3 and < 6 → 10% discount
+If quantity < 3 → 5% discount
+5. Calculations
+getTotalCost() → Returns total cost (price × quantity)
+getDiscountAmount() → Returns discount amount
+getFinalPrice() → Returns final price after discount
+6. Display Method
+printProductDetails() → Displays all product info including:
+Product ID, Name, Price per unit, Quantity
+Discount %, Discount amount
+Final payable amount
+-----------------------------------------------------------------------------------------------------------
+Question-3)
+Scenario
+At Cafe JavaBrew, barista Neha is creating a Java program to calculate discounts for coffee orders.
+ She needs overloaded methods to compute discounts based on:
+ 1️ The amount only,
+ 2️ The amount and type of customer (regular or loyal), and
+ 3️ The amount with an extra bonus.
+Additionally, Neha wants to use overloaded constructors —
+ one that initializes only the amount,
+ and another that initializes both the amount and type.
+Discount rules:
+For method 1 → 10% of amount
+For method 2 → 5% for “regular”, 15% for “loyal”
+For method 3 → (10% of amount) + 5
+The discount should not exceed ₹100.
+
+
+Your task is to write a Java program to calculate these discounts and print results accordingly.
+
+Input Format
+First line: Integer amount (for method 1)
+Second line: Integer amount2 and string type (for method 2)
+Third line: Integer amount3 (for method 3)
+Fourth line: Integer amount4 (for constructor 1)
+Fifth line: Integer amount5 and string type2 (for constructor 2)
+
+Output Format
+Line 1: Discount from method 1
+Line 2: Discount from method 2
+Line 3: Discount from method 3
+Line 4: Amount from constructor 1
+Line 5: Amount from constructor 2
+
+ Testcase 1
+Input
+800
+1000 regular
+600
+1200
+1500 loyal
+Working
+Method 1: 10% of 800 = 80
+Method 2 (regular): 5% of 1000 = 50
+Method 3: 10% of 600 = 60 + 5 = 65
+Constructor amounts: 1200, 1500
+
+
+Output
+80
+50
+65
+1200
+1500
+
+Testcase 2
+Input
+500
+700 loyal
+400
+1000
+900 regular
+Working
+Method 1: 10% of 500 = 50
+Method 2 (loyal): 15% of 700 = 105 → capped to 100
+Method 3: 10% of 400 = 40 + 5 = 45
+Constructor amounts: 1000, 900
+
+
+Output
+50
+100
+45
+1000
+900
+
+Testcase 3
+Input
+200
+200 regular
+300
+400
+500 loyal
+Working
+Method 1: 10% of 200 = 20
+Method 2 (regular): 5% of 200 = 10
+Method 3: 10% of 300 = 30 + 5 = 35
+Constructor amounts: 400, 500
+
+
+Output
+20
+10
+35
+400
+500
+-------------------------------------------------------------------------------------------------------------
+Question-4)
+ At FitLife Gym, trainer Jake is building a Java program to track calories burned.
+ He needs a class with overloaded methods to calculate calories based on hours, exercise type, or both, and overloaded constructors to initialize member details (ID only, or ID and type).
+The overloaded methods, called from main(), compute:
+One with hours × 100
+Another with cardio (hours × 120) or strength (hours × 80)
+And another with hours × 100 + 50
+
+
+Constructors set the member ID and optionally the type.
+ Calories should be capped at 1000.
+With a fitness challenge ongoing, accuracy is vital.
+ Can you help Jake write a Java class with overloaded methods and constructors?
+Input Format
+First line: An integer hours (hours for method 1)
+Second line: An integer hours2 and string type ("cardio" or "strength") for method 2
+Third line: An integer hours3 for method 3
+Fourth line: An integer id for constructor 1
+Fifth line: An integer id2 and string type2 for constructor 2
+Output Format
+Three integers: calories from method 1, method 2, and method 3
+Two integers: member IDs from both constructors
+
+Test Cases
+Testcase-1
+Input
+5
+6 cardio
+4
+101
+202 strength
+Working
+Method 1: 5 × 100 = 500
+Method 2: cardio → 6 × 120 = 720
+Method 3: 4 × 100 + 50 = 450
+IDs: 101, 202
+
+
+Output
+500
+720
+450
+101
+202
+
+Testcase-2
+Input
+12
+9 strength
+10
+111
+222 cardio
+Working
+Method 1: 12 × 100 = 1200 → capped to 1000
+Method 2: strength → 9 × 80 = 720
+Method 3: 10 × 100 + 50 = 1050 → capped to 1000
+IDs: 111, 222
+
+
+Output
+1000
+720
+1000
+111
+222
+
+Testcase-3
+Input
+8
+5 yoga
+6
+777
+888 cardio
+Working
+ "yoga" is not cardio or strength → default calculation used: hours × 80
+Method 1: 8 × 100 = 800
+Method 2: yoga → 5 × 80 = 400
+Method 3: 6 × 100 + 50 = 650
+IDs: 777, 888
+
+
+Output
+800
+400
+650
+777
+888
+------------------------------------------------------------------------------------------------------------------
+Question-5)
+At HopeFund, volunteer Ava is creating a Java program to match donations.
+ She needs a class with overloaded methods to compute matched amounts based on donation, donor type, or both, and overloaded constructors to initialize donor details (ID only, or ID and type).
+The overloaded methods, called from main(), compute:
+One with donation × 2
+Another with individual (donation × 3) or corporate (donation × 4)
+And another with donation × 2 + 100
+
+
+Constructors set the donor ID and optionally the type.
+ Ava needs matches capped at 10,000.
+ With a fundraising event nearing, accuracy is key.
+Can you help Ava write a Java class with overloaded methods and constructors?
+Input Format
+First line: An integer donation (amount for method 1)
+Second line: An integer donation2 and string type ("individual" or "corporate") for method 2
+Third line: An integer donation3 for method 3
+Fourth line: An integer id for constructor 1
+Fifth line: An integer id2 and string type2 for constructor 2
+
+Output Format
+Three integers: match from method 1 (donation × 2), 
+                method 2 (individual: donation2 × 3, corporate: donation2 × 4), 
+                method 3 (donation × 2 + 100)
+Two integers: donor IDs from both constructors
+
+Testcase-1
+Input:
+2000
+1500 individual
+1000
+111
+222 corporate
+
+Output:
+4000
+4500
+2100
+111
+222
+Explanation:
+Method 1 → 2000 × 2 = 4000
+Method 2 → individual → 1500 × 3 = 4500
+Method 3 → 1000 × 2 + 100 = 2100
+Constructors → IDs = 111, 222
+
+
+Testcase-2
+Input:
+4000
+3000 corporate
+5000
+101
+202 individual
+
+Output:
+8000
+10000
+10000
+101
+202
+Explanation:
+Method 1 → 4000 × 2 = 8000
+Method 2 → corporate → 3000 × 4 = 12000 → capped at 10000
+Method 3 → 5000 × 2 + 100 = 10100 → capped at 10000
+Constructors → IDs = 101, 202
+
+
+Testcase-3
+Input:
+3500
+2500 partner
+4500
+555
+777 corporate
+
+Output:
+7000
+10000
+9100
+555
+777
+Explanation:
+Method 1 → 3500 × 2 = 7000
+Method 2 → invalid type (“partner”) → defaults to corporate calculation → 2500 × 4 = 10000 (capped)
+Method 3 → 4500 × 2 + 100 = 9100
+Constructors → IDs = 555, 777
+---------------------------------------------------------------------------------------------------------------
+Question-6)
+At WorkWell Inc., manager Zoe is creating a Java program to calculate overtime pay.
+ She needs a class with overloaded methods to compute pay based on hours, role, or both, and overloaded constructors to initialize employee details (ID only, or ID and role).
+The overloaded methods, called from main(), compute:
+Method 1: hours × 20
+Method 2: staff → hours × 15, manager → hours × 25
+Method 3: hours × 20 + 30
+
+
+Constructors set the employee ID and optionally the role.
+ Zoe needs the pay capped at 1000.
+ With payroll processing soon, accuracy is critical.
+Input Format
+First line: An integer hours (hours for method 1)
+Second line: An integer hours2 and string role ("staff" or "manager") for method 2
+Third line: An integer hours3 for method 3
+Fourth line: An integer id for constructor 1
+Fifth line: An integer id2 and string role2 for constructor 2
+Output Format
+Three integers: pay from method 1, method 2, and method 3
+Two integers: employee IDs from both constructors
+
+Testcase-1
+Input:
+20
+30 staff
+25
+101
+102 manager
+
+Output:
+400
+450
+530
+101
+102
+Explanation:
+Method 1 → 20 × 20 = 400
+Method 2 → staff → 30 × 15 = 450
+Method 3 → 25 × 20 + 30 = 530
+Constructors → IDs = 101, 102
+
+
+Testcase-2
+Input:
+60
+40 manager
+70
+201
+202 staff
+
+Output:
+1000
+1000
+1000
+201
+202
+Explanation:
+Method 1 → 60 × 20 = 1200 → capped at 1000
+Method 2 → manager → 40 × 25 = 1000 → exact cap
+Method 3 → 70 × 20 + 30 = 1430 → capped at 1000
+Constructors → IDs = 201, 202
+
+
+Testcase-3
+Input:
+10
+15 executive
+30
+301
+302 manager
+
+Output:
+200
+375
+630
+301
+302
+
+Explanation:
+Method 1 → 10 × 20 = 200
+Method 2 → invalid role “executive” defaults to manager rate (15 × 25 = 375)
+Method 3 → 30 × 20 + 30 = 630
+Constructors → IDs = 301, 302
+-----------------------------------------------------------------------------------------------------------
+Question-7)
+Scenario:
+At GadgetHub, manager Alex is developing a Java program to calculate inventory prices.
+ He needs a class with overloaded methods to compute total prices based on:
+An array of prices
+A single price with category (electronics or appliances)
+Both (array + bonus 100)
+
+
+He also needs overloaded constructors:
+One constructor initializes inventory ID only
+Another initializes inventory ID and category
+
+
+Business rules:
+For electronics → price × 1.1
+For appliances → price × 1.2
+Add a 100 bonus in the third method
+All results are capped at 10000
+
+
+With a sale nearing, accuracy is crucial!
+ Help Alex implement this using method overloading and constructor overloading.
+Input Format
+First line: n (number of items)
+Second line: n space-separated integers (prices)
+Third line: price and category (electronics/appliances)
+Fourth line: n2 (number of items for 3rd method)
+Fifth line: n2 space-separated integers
+Sixth line: id1 (for first constructor)
+Seventh line: id2 and category2 (for second constructor)
+Output Format
+method1_result
+method2_result
+method3_result
+id1
+id2
+
+Test Case 1
+Input
+3
+1000 2000 3000
+4000 electronics
+2
+500 600
+101
+202 appliances
+
+Output
+6000
+4400
+1200
+101
+202
+Explanation
+Method 1 → 1000 + 2000 + 3000 = 6000
+Method 2 → 4000 × 1.1 = 4400
+Method 3 → (500 + 600) + 100 = 1200
+Constructor 1 → ID = 101
+Constructor 2 → ID = 202
+
+
+Test Case 2
+Input
+4
+3000 4000 5000 2000
+2500 appliances
+3
+1500 1800 1900
+111
+222 electronics
+
+Output
+10000
+3000
+5300
+111
+222
+Explanation
+Method 1 → 3000 + 4000 + 5000 + 2000 = 14000 → capped at 10000
+Method 2 → 2500 × 1.2 = 3000
+Method 3 → (1500 + 1800 + 1900) + 100 = 5300
+IDs: 111 and 222
+---------------------------------------------------------------------------------------------------------
+Question-8) MusicFest Ticket Discount Calculator
+At MusicFest, organizer Sarah is creating a Java program to apply ticket discounts.
+She needs a class with overloaded methods to compute total discounts from:
+An array of ticket prices
+A single ticket price and type (early or regular)
+Both (array + 20 bonus)
+
+
+She also needs overloaded constructors:
+One initializes ticket ID only
+Another initializes ticket ID and type
+
+
+Discount Rules:
+Method 1 → array sum × 0.1
+Method 2 → early → price × 0.2, regular → price × 0.05
+Method 3 → array sum × 0.1 + 20
+All values are floored (use Math.floor) and capped at 1000
+
+
+Sarah needs accuracy as the concerts are selling out fast.
+Input Format
+First line: Integer n (number of tickets)
+Second line: n space-separated integers (ticket prices)
+Third line: Integer price and String type ("early" or "regular") for method 2
+Fourth line: Integer n2 and n2 space-separated integers for method 3
+Fifth line: Integer id (for constructor 1)
+Sixth line: Integer id2 and String type2 (for constructor 2)
+Output Format
+Three integers — discount from:
+1️ Method 1 (array sum × 0.1)
+2️ Method 2 (early ×0.2 / regular ×0.05)
+3️ Method 3 (array sum × 0.1 + 20)
+Two integers — ticket IDs from both constructors
+Test Case 1
+Input
+3
+100 200 300
+400 early
+2
+500 600
+101
+202 regular
+
+Output
+60
+80
+130
+101
+202
+Explanation
+Method 1: (100+200+300) × 0.1 = 600 × 0.1 = 60
+Method 2: 400 × 0.2 = 80 (early ticket)
+Method 3: (500+600) × 0.1 + 20 = 1100 × 0.1 + 20 = 130
+IDs: 101, 202
+
+
+Test Case 2
+Input
+4
+400 500 600 700
+800 regular
+3
+200 300 400
+301
+401 early
+
+Output
+220
+40
+90
+301
+401
+Explanation
+Method 1 → (400+500+600+700)=2200×0.1=220
+Method 2 → 800×0.05=40 (regular)
+Method 3 → (200+300+400)=900×0.1+20=90
+IDs: 301, 401
+
+
+Test Case 3
+Input
+5
+2000 3000 4000 1000 500
+10000 early
+3
+2000 4000 6000
+111
+222 regular
+
+Output
+1000
+1000
+1000
+111
+222
+Explanation
+Method 1 → (2000+3000+4000+1000+500)=10500×0.1=1050 → capped at 1000
+Method 2 → 10000×0.2=2000 → capped at 1000
+Method 3 → (2000+4000+6000)=12000×0.1+20=1220 → capped at 1000
+----------------------------------------------------------------------------------------------------------
+Question-9)
+Book Loan Counter (Overloaded Methods & Constructors)
+At CityLibrary, librarian Rajesh is building a Java program to count book loans.
+ He needs a class with overloaded methods to compute total loans from an array, increment a single loan count, or both, and overloaded constructors to initialize book details (ID only, or ID and type).
+The overloaded methods, called from main(), should compute:
+Method 1: Total from array sum
+Method 2: Loan count +1 (for fiction) or +2 (for non-fiction)
+Method 3: Array sum +10
+
+
+Constructors set:
+Constructor 1: Book ID only
+Constructor 2: Book ID and type
+
+
+Rajesh needs counts capped at 1000.
+ With patrons waiting, accuracy is key!
+Input Format
+First line: An integer n (array size, 1 ≤ n ≤ 100)
+Second line: n space-separated integers (loan counts)
+Third line: An integer count and string type ("fiction" or "non-fiction") for method 2
+Fourth line: An integer n2 and n2 space-separated integers for method 3
+Fifth line: An integer id for constructor 1
+Sixth line: An integer id2 and string type2 for constructor 2
+Output Format
+Three integers: total from method 1, method 2, method 3
+Two integers: book IDs from both constructors
+
+Testcase 1
+Input:
+4
+10 20 30 40
+15 fiction
+3
+5 10 15
+101
+202 non-fiction
+
+Output:
+100
+16
+40
+101
+202
+Explanation:
+Method 1 → 10 + 20 + 30 + 40 = 100
+Method 2 → fiction → 15 + 1 = 16
+Method 3 → (5 + 10 + 15) + 10 = 40
+Constructor 1 → ID = 101
+Constructor 2 → ID = 202
+
+
+Testcase 2
+Input:
+3
+500 400 200
+999 non-fiction
+2
+20 30
+555
+777 fiction
+
+Output:
+1000
+1000
+60
+555
+777
+Explanation:
+Method 1 → sum = 1100 → capped at 1000
+Method 2 → 999 + 2 = 1001 → capped at 1000
+Method 3 → (20 + 30) + 10 = 60
+
+
+Testcase 3
+Input:
+5
+100 100 100 100 100
+50 non-fiction
+3
+10 10 10
+111
+222 fiction
+Output:
+500
+52
+40
+111
+222
+----------------------------------------------------------------------------------------------------------
+Question-10)
+Exhibit Visitor Tracker (Overloaded Methods & Constructors)
+ Scenario
+At ArtWorld Museum, curator Lily is developing a Java program to track exhibit visitors.
+ She needs a class with overloaded methods to compute total visitors from an array, update a single visitor count, or both, and overloaded constructors to initialize exhibit details (ID only, or ID and type).
+The overloaded methods, called from main(), should compute:
+Method 1: array sum
+Method 2: count +10 (permanent) or +20 (temporary)
+Method 3: array sum +50
+
+
+Constructors set:
+Constructor 1: Exhibit ID only
+Constructor 2: Exhibit ID and type
+Lily needs visitor counts capped at 1000 for accuracy.
+
+Input Format
+First line: An integer n (array size, 1 ≤ n ≤ 50)
+Second line: n space-separated integers (visitor counts)
+Third line: An integer count and string type ("permanent" or "temporary") for method 2
+Fourth line: An integer n2 and n2 space-separated integers for method 3
+Fifth line: An integer id for constructor 1
+Sixth line: An integer id2 and string type2 for constructor 2
+Output Format
+Three integers: total from method 1, method 2, and method 3
+Two integers: exhibit IDs from both constructors
+
+Testcase 1
+Input:
+4
+100 200 150 50
+300 permanent
+3
+20 30 40
+101
+202 temporary
+Output:
+500
+310
+140
+101
+202
+Explanation:
+Method 1 → 100 + 200 + 150 + 50 = 500
+Method 2 → permanent → 300 + 10 = 310
+Method 3 → (20 + 30 + 40) + 50 = 140
+Constructor IDs → 101 and 202
+
+
+Testcase 2
+Input:
+3
+400 400 300
+980 temporary
+2
+10 20
+111
+222 permanent
+
+Output:
+1000
+1000
+80
+111
+222
+Explanation:
+Method 1 → sum = 1100 → capped at 1000
+Method 2 → 980 + 20 = 1000 (capped)
+Method 3 → (10 + 20) + 50 = 80
+
+
+Testcase 3
+Input:
+5
+50 50 100 100 200
+150 temporary
+4
+100 150 200 50
+555
+777 permanent
+
+Output:
+500
+170
+550
+555
+777
+Explanation:
+Method 1 → 50 + 50 + 100 + 100 + 200 = 500
+Method 2 → temporary → 150 + 20 = 170
+Method 3 → (100 + 150 + 200 + 50) + 50 = 550
+----------------------------------------------------------------------------------------------------------
+Question-11)
+At TechProj, manager Ethan is developing a Java program to track task hours.
+ He needs a class with overloaded methods to compute total hours from an array,
+ adjust a single task’s hours, or both, and overloaded constructors to initialize task details (ID only, or ID and priority).
+The overloaded methods, called from main(), should compute:
+Method 1: Array sum
+Method 2: hours × 1.2 (for “high”) or hours × 0.8 (for “low”) — rounded down
+Method 3: Array sum + 20
+
+
+The constructors set the task ID and optionally the priority.
+ All hour totals must be capped at 1000.
+Input Format
+First line: An integer n (array size, 1 ≤ n ≤ 50)
+Second line: n space-separated integers (task hours)
+Third line: An integer hours and string priority ("high" or "low") for method 2
+Fourth line: An integer n2 and n2 space-separated integers for method 3
+Fifth line: An integer id for constructor 1
+Sixth line: An integer id2 and string priority2 for constructor 2
+Output Format
+Three integers: total from method 1, method 2, and method 3
+Two integers: task IDs from both constructors
+
+Test Cases
+ Testcase 1
+Input
+5
+10 20 30 40 50
+50 high
+4
+10 10 20 30
+101
+102 low
+Output
+150
+60
+90
+101
+102
+Explanation
+Method 1 → 10+20+30+40+50 = 150
+Method 2 → 50×1.2 = 60
+Method 3 → (10+10+20+30)+20 = 90
+Constructors return IDs 101 and 102.
+
+
+Testcase 2
+Input
+3
+100 200 300
+120 low
+3
+400 300 200
+501
+502 high
+Output
+600
+96
+920
+501
+502
+Explanation
+Method 1 → 100+200+300 = 600
+Method 2 → 120×0.8 = 96
+Method 3 → (400+300+200)+20 = 920
+IDs printed: 501, 502.
+
+
+Testcase 3
+Input
+4
+300 400 500 600
+800 high
+4
+250 250 250 250
+201
+202 low
+Output
+1000
+960
+1000
+201
+202
+Explanation
+Method 1 → 300+400+500+600 = 1800 → capped to 1000
+Method 2 → 800×1.2 = 960
+Method 3 → (250+250+250+250)+20 = 1020 → capped to 1000
+-----------------------------------------------------------------------------------------------------------
+Question 12)
+At BookHaven Library, librarian Noah is developing a Java program to manage book reservations.
+ He needs a class with overloaded methods to compute total priority from an array, update a single book’s priority, or both,
+ and overloaded constructors to initialize book details (ID only, or ID and type).
+The overloaded methods, called from main(), should compute:
+Method 1: Array sum
+Method 2: priority + 5 (for "new") or priority + 3 (for "classic")
+Method 3: Array sum + 5
+
+
+Constructors set the book ID and optionally the type.
+ All priorities must be capped at 100.
+ With high demand for books, accuracy is key.
+Input Format
+First line: An integer n (array size, 1 ≤ n ≤ 50)
+Second line: n space-separated integers (priority scores)
+Third line: An integer priority and string type ("new" or "classic") for method 2
+Fourth line: An integer n2 and n2 space-separated integers for method 3
+Fifth line: An integer id for constructor 1
+Sixth line: An integer id2 and string type2 for constructor 2
+
+Output Format
+Three integers: total from method 1 (array sum),
+                method 2 (new: +5, classic: +3),
+                method 3 (array sum + 5)
+Two integers: book IDs from both constructors
+
+Sample Testcases
+ Testcase 1
+Input
+5
+10 15 20 10 5
+30 new
+3
+10 10 20
+101
+102 classic
+Output
+60
+35
+45
+101
+102
+Explanation:
+Method 1 → 10 + 15 + 20 + 10 + 5 = 60
+Method 2 → 30 + 5 = 35 (for “new”)
+Method 3 → (10 + 10 + 20) + 5 = 45
+IDs printed from constructors → 101 and 102
+
+
+Testcase 2
+Input
+4
+25 25 25 25
+90 classic
+3
+30 30 30
+201
+202 new
+
+Output
+100
+93
+95
+201
+202
+
+Explanation:
+Method 1 → 25×4 = 100 (cap 100)
+Method 2 → 90 + 3 = 93
+Method 3 → (30 + 30 + 30) + 5 = 95
+
+
+Testcase 3
+Input
+3
+40 50 30
+98 new
+2
+50 60
+301
+302 classic
+
+Output
+100
+100
+100
+301
+302
+Explanation:
+Method 1 → 40+50+30 = 120 → capped at 100
+Method 2 → 98+5 = 103 → capped at 100
+Method 3 → (50+60)+5 = 115 → capped at 100
+---------------------------------------------------------------------------------------------------------------
+Question-13)
+At DataMatrix Inc., analyst Leo is creating a Java program to find the maximum element in a matrix.
+ He needs a class with overloaded methods to find:
+the maximum in the entire matrix,
+the maximum in a specific row, and
+the maximum in a specific column,
+
+
+and overloaded constructors to initialize matrix details (matrix ID only, or ID and dimensions).
+The overloaded methods, called from main(), compute:
+maximum of all elements
+maximum in a specified row
+maximum in a specified column
+
+
+Constructors set the matrix ID and optionally the row count.
+ Leo needs values to handle negative numbers and be capped at 10⁶ (1000000) for reporting.
+ With a data analysis project due, accuracy is essential.
+Can you help Leo write a Java class with overloaded methods and constructors to find matrix maxima?
+Input Format
+First line: Two integers rows and cols (matrix dimensions, 1 ≤ rows, cols ≤ 50)
+Next rows lines: cols space-separated integers (matrix elements)
+Third line: An integer rowIndex (row to find max, 0 ≤ rowIndex < rows)
+Fourth line: An integer colIndex (column to find max, 0 ≤ colIndex < cols)
+Fifth line: An integer id for constructor 1
+Sixth line: An integer id2 and integer rows2 for constructor 2
+ Output Format
+Three integers: 
+  maximum from method 1 (entire matrix),
+  method 2 (specified row),
+  method 3 (specified column)
+Two integers:
+  matrix IDs from both constructors
+
+Testcase-1
+Input
+3 3
+10 20 30
+5 15 25
+-1 -5 -10
+1
+2
+101
+202 3
+
+Output
+30
+30
+25
+101
+202
+ Explanation
+Entire matrix max = 30
+Row 1 (index 1 → 5 15 25) → max = 25
+Column 2 (index 2 → 30,25,-10) → max = 30
+Constructor 1 → ID 101
+Constructor 2 → ID 202
+
+
+Testcase-2
+Input
+2 2
+500000 600000
+700000 800000
+1
+0
+111
+222 2
+
+Output
+800000
+800000
+700000
+111
+222
+ Explanation
+Entire matrix max = 800000
+Row 1 → max = 800000
+Column 0 → max = 700000
+IDs printed from both constructors
+
+
+Testcase-3
+Input
+2 3
+-100 -200 -300
+-10 -20 -30
+0
+1
+500
+999 4
+
+Output
+-10
+-100
+-20
+500
+999
+ Explanation
+Handles negative numbers correctly:
+Overall max = -10
+Row 0 → max = -100
+Column 1 → max = -20
+------------------------------------------------------------------------------------------------------------
