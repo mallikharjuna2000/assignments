@@ -3525,3 +3525,267 @@ Explanation:
 Total = 15000 → capped at 10000
 Adjusted = 5000 × 2 = 10000 → exceeds limit ⇒ return 0 (as per rule)
 ================================================================================================
+Day-21 Recurssion Examples
+---------------------------
+Question-1)
+At CodeCamp, learner Mia is creating a Java program to generate Fibonacci numbers for a sequence project.
+ She needs a recursive method to compute the nth Fibonacci number, where each number is the sum of the two preceding ones:
+F(0) = 0  
+F(1) = 1  
+F(n) = F(n-1) + F(n-2)
+
+The method should handle base cases and ensure results fit within constraints.
+ Mia wants to call this method from main() to test multiple inputs.
+ The recursive approach should break down the problem into smaller subproblems.
+ With a coding contest approaching, Mia needs this method to be correct and efficient.
+
+ Input Format
+First line: An integer n (index in Fibonacci sequence).
+
+
+ Output Format
+A long integer: nth Fibonacci number.
+
+
+
+ Testcases
+Testcase 1
+Input
+5
+Output
+5
+
+Testcase 2
+Input
+10
+Output
+55
+
+Testcase 3
+Input
+0
+Output
+0
+
+-----------------------------------------------------------------------------------------------------------
+Question-2)
+At MathWorks, student Sophie is developing a Java program to compute powers for her algebra class.
+ She needs a recursive method to calculate xⁿ (x raised to the power n),
+ where each recursive call reduces the exponent by 1.
+The method should:
+handle base cases (n = 0 → 1),
+ensure results fit within safe limits,
+and multiply x by the result of x^(n-1) recursively.
+
+
+Sophie wants to test multiple inputs using main().
+ With a math quiz approaching, she needs this recursive method to be reliable and accurate.
+
+ Input Format
+First line: Two integers x and n representing the base and exponent.
+ Output Format
+A long integer: value of xⁿ.
+
+
+Testcases
+Testcase-1
+Input
+2 5
+Output
+32
+
+Testcase-2
+Input
+3 4
+Output
+81
+
+Testcase-3
+Input
+5 0
+Output
+1
+------------------------------------------------------------------------------------------------------------
+
+
+ Question-3)
+At StudyWell, teacher Ava is creating a Java program to teach students about summing natural numbers.
+ She needs a recursive method to compute the sum of the first n natural numbers
+ (e.g., for n = 5 → sum = 1 + 2 + 3 + 4 + 5 = 15).
+The method should:
+handle the base case (n = 0 → 0),
+reduce the problem by adding n to the result of sum(n-1).
+
+
+Ava wants to call this method from main() to demonstrate to her class.
+ With a lesson plan due, Ava needs this method to be clear, correct, and easy to understand.
+
+ Input Format
+First line: An integer n (number of terms).
+Output Format
+An integer: sum of first n natural numbers.
+
+
+Testcases
+Testcase-1
+Input
+5
+Output
+15
+
+Testcase-2
+Input
+10
+Output
+55
+
+Testcase-3
+Input
+0
+Output
+0
+-----------------------------------------------------------------------------------------------------------
+Question-4)
+At DataCorp, analyst Alex is developing a Java program to sum array elements.
+ He needs a recursive method to compute the sum of an array by adding the last element to the sum of the remaining elements.
+The method should:
+Handle base cases (empty array → 0)
+Be called from main() to process inputs
+Use recursion to reduce array size in each call
+
+
+With a data project due, Alex needs this method to be efficient and accurate.
+Input Format
+First line: An integer n (array size, 0 ≤ n ≤ 100)
+Second line: n space-separated integers (array elements)
+
+
+ Output Format
+An integer: sum of array elements
+
+
+Testcases
+Testcase 1
+Input
+5
+10 20 30 40 50
+Output
+150
+
+Testcase 2
+Input
+3
+5 -2 8
+
+Output
+11
+
+Testcase 3
+Input
+0
+Output
+0
+--------------------------------------------------------------------------------------------------------
+Question-5)
+At CodeChallenge, programmer Sarah is building a Java program to reverse an array.
+ She needs a recursive method to swap elements from the ends inward, reducing the problem size in each call.
+The method should:
+Handle base cases (empty or single-element arrays)
+Be called from main() to process inputs
+Recursively swap elements and move inward
+
+
+With a coding contest nearing, Sarah needs this method to be correct and efficient.
+ Input Format
+First line: An integer n (array size, 0 ≤ n ≤ 100)
+Second line: n space-separated integers (array elements)
+ Output Format
+n space-separated integers: reversed array
+
+
+ Testcases
+Testcase 1
+Input
+5
+10 20 30 40 50
+Output
+50 40 30 20 10
+
+Testcase 2
+Input
+4
+1 2 3 4
+Output
+4 3 2 1
+
+Testcase 3
+Input
+1
+99
+Output
+99
+--------------------------------------------------------------------------------------------------------
+Question-6)
+At SearchSys, engineer Olivia is developing a Java program to search for an element in an array.
+ She needs a recursive method to check if a target exists by examining the last element and recursing on the rest.
+ The method should handle base cases (empty array → false) and be called from main() to test inputs.
+ The recursive approach reduces the array size in each call.
+ With a search optimization task due, Olivia needs this method to be accurate.
+ Can you help Olivia write a Java class with a recursive search method?
+Input Format
+First line: An integer n (array size, 0 ≤ n ≤ 100)
+Second line: n space-separated integers (array elements)
+Third line: An integer target (element to search)
+ Output Format
+A string: "found" or "not found"
+
+Sample Testcases
+Testcase-1
+Input:
+5
+2 4 6 8 10
+14
+Step-by-step:
+2+4 = 6 ≠ 14
+4+6 = 10 ≠ 14
+6+8 = 14  found
+
+
+Output:
+found
+Explanation:
+ The adjacent pair (6, 8) adds up to 14, so output is "found".
+
+Testcase-2
+Input:
+4
+1 3 5 7
+10
+
+Step-by-step:
+1+3 = 4
+3+5 = 8
+5+7 = 12
+ No pair sums to 10.
+Output:
+not found
+
+Explanation:
+ No two adjacent numbers sum to 10.
+Testcase-3
+Input:
+6
+5 10 15 20 25 30
+35
+
+Step-by-step:
+5+10 = 15
+10+15 = 25
+15+20 = 35  found
+
+Output:
+found
+
+Explanation:
+ Adjacent pair (15, 20) gives sum 35 → "found".
+ =============================================================================================
