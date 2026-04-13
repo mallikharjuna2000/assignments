@@ -2988,3 +2988,237 @@ Fuel Consumed: 18.0
 Distance Travelled: 324.0
 Mileage: 18.0 km/l
 ---------------------------------------------------------------------------------------------------
+Day-20 Methods
+----------------
+Question-1)
+Student Marks Calculator using Arrays
+Problem Statement:
+ Write a Java program to calculate the total and average marks of a student using arrays and methods.
+Requirements:
+Create a class named Student with the following:
+Fields:
+name (String)
+marks (int array)
+
+
+Methods:
+setDetails(String n, int[] m) → sets the student name and marks array.
+calculateTotal() → returns the total of all marks in the array.
+calculateAverage() → returns the average of marks
+displayDetails() → prints the student name, total, and average.
+
+
+In the main method:
+Create a Student object.
+Assign a name and marks array (e.g., 3 or 5 subjects).
+Call the methods to calculate total and average.
+Display the results.
+
+-----------------------------------------------------------------------------------------------------------
+
+Question-2):
+ In FitLife Gym, Ramesh tracks his daily steps using a StepTracker class.
+ If steps are more than 10,000, display “Excellent!”.
+ If between 5,000 and 10,000, display “Good job!”.
+ Otherwise, display “Keep going!”.
+
+testcase-1
+input
+12000
+output
+Excellent!
+
+testcase-2
+input
+7000
+output
+Good job!
+
+testcase-3
+input
+3000
+output
+Keep going!
+------------------------------------------------------------------------------------------------------------
+Question-3)
+At TechFest, organizer Zoe is developing a Java program to track attendees. She needs a static method to update the total attendees across all events and a non-static method to update attendees for a specific event. The static method updates a shared count, while the non-static method updates an instance variable. Both methods must validate that inputs are non-negative and the total attendees donâ€™t exceed 300 per event or overall. With the conference starting soon, Zoe needs these methods to keep counts accurate. Can you help Zoe write a Java class with these methods?
+Input Format:
+First line: An integer staticAttendees (attendees to add to total).
+ Second line: An integer instanceAttendees (attendees to add to event).
+Output Format:
+Two integers: updated static attendee count and updated instance attendee count.
+
+
+ Constraints:
+0 ≤ staticAttendees, instanceAttendees ≤ 100
+Total attendees (static and instance) ≤ 300
+
+
+
+
+ Sample Testcases
+ Testcase-1
+Input:
+50
+20
+Output:
+50 20
+
+
+Testcase-2
+Input:
+0
+280
+Output:
+50 280
+
+
+Testcase-3
+Input:
+30
+0
+Output:
+80 0
+---------------------------------------------------------------------------------------------------------
+Question-4:)
+ Festive Events – Tracking Ticket Sales
+At Festive Events, organizer Sarah is creating a Java program to track ticket sales using an array.
+ She needs a static method to update the total tickets sold across all concerts and a non-static method to update tickets for a specific concert in an instance’s array.
+The static method updates a shared total, while the non-static method modifies the array in place.
+ Both methods must validate inputs and ensure ticket counts don’t exceed 5000 per concert or total.
+With concerts selling out, Sarah needs these methods to keep sales accurate.
+ Can you help Sarah write a Java class with these methods?
+
+Input Format:
+First line: An integer n (number of concerts, 1 ≤ n ≤ 100)
+Second line: n space-separated integers (current ticket counts)
+Third line: An integer index (concert to update, 0 ≤ index < n)
+Fourth line: An integer staticTickets (tickets to add to total)
+Fifth line: An integer instanceTickets (tickets to add to concert)
+
+
+ Output Format:
+Two lines:
+First line → Updated static total tickets
+Second line → Updated array (space-separated ticket counts)
+
+
+Sample Testcases
+ Testcase-1
+Input:
+3
+1000 1200 800
+1
+500
+200
+Output:
+3700
+1000 1400 800
+Explanation:
+ Initial total = 1000 + 1200 + 800 = 3000
+ Add 500 to total → 3500
+ Concert 1 updated → 1200 + 200 = 1400 → new total 3700 printed first
+
+Testcase-2
+Input:
+4
+1200 900 700 800
+2
+300
+250
+Output:
+4400
+1200 900 950 800
+Explanation:
+ Initial total = 1200 + 900 + 700 + 800 = 3600
+ Add 300 → total = 3900
+ Concert index 2 updated → 700 + 250 = 950
+ Printed final total 4400
+
+Testcase-3
+Input:
+2
+4000 800
+1
+2000
+100
+Output:
+4800
+4000 900
+Explanation:
+ Initial total = 4800
+ Concert 1 updated → 800 + 100 = 900 (within limit)
+
+----------------------------------------------------------------------------------------------------------
+Question-5)
+At City Library, librarian Rajesh is building a Java program to manage patron fines using an array.
+He needs:
+a static method to update the total fines across all patrons, and
+a non-static method to update fines for a specific patron in an instance’s array.
+
+
+The static method updates a shared total, while the non-static method modifies the array in place.
+Both methods must validate inputs and ensure fines don’t exceed 100 dollars per patron or total.
+With patrons waiting, Rajesh needs these methods to keep fines accurate.
+Can you help Rajesh write a Java class with these methods?
+Input Format
+First line: An integer n (number of patrons, 1 ≤ n ≤ 100)
+Second line: n space-separated integers (current fine amounts)
+Third line: An integer index (patron to update, 0 ≤ index < n)
+Fourth line: An integer staticFines (fines to add to total)
+Fifth line: An integer instanceFines (fines to add to patron)
+
+Output Format
+First line: Updated static total
+Second line: Updated array of fines (space-separated)
+
+Sample Testcases
+ Testcase 1
+Input:
+4
+10 20 30 5
+2
+15
+10
+Output:
+80
+10 20 40 5
+Explanation:
+Initial total = 10 + 20 + 30 + 5 = 65
+Add static 15 → total = 80
+Patron at index 2 → 30 + 10 = 40
+Final array → 10 20 40 5
+
+
+Testcase 2
+Input:
+3
+50 40 5
+0
+20
+30
+Output:
+115
+80 40 5
+Explanation:
+Initial total = 95
+Add static 20 → 115
+Patron 0: 50 + 30 = 80
+Final → 80 40 5
+
+
+Testcase 3 (Invalid addition ignored)
+Input:
+3
+90 5 3
+1
+15
+200
+Output:
+113
+90 5 3
+Explanation:
+Initial total = 98
+Add static 15 → total = 113 ✅
+Patron 1 cannot add +200 (would exceed 100) ❌
+So array remains unchanged → 90 5 3
