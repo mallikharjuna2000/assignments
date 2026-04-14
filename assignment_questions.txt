@@ -5647,3 +5647,358 @@ Method2: 1000×1.1=1100
 Method3: 4000+4000+500=8500
 Sum=20000
 =================================================================================================
+Day-24 Inheritance and Super w.r.t Inheritance
+==============================================
+Question-1)
+SCENARIO QUESTION
+ At FitLife Gym, trainer Jake is building a Java program to track workout calories. He needs a superclass Workout with private variables for member ID and calories burned, accessed via public getters and setters. A subclass CardioWorkout extends Workout, using super to access these variables. The subclass includes methods to compute calorie metrics, called from main(). The private variables protect member data. Methods compute: calories × 1.5, a fixed 30 calories, or calories × 1.5 + 30. Jake needs results capped at 1000 for safety. With a fitness challenge ongoing, accuracy is vital. Can you help Jake write a Java program with a superclass, subclass using super, and methods to compute calories?
+
+INPUT FORMAT
+ First line: An integer id (member ID for setter via super).
+ Second line: An integer calories (calories for setter via super).
+ Third line: An integer calories2 for method 1.
+ Fourth line: An integer for method 2 (fixed calories).
+ Fifth line: An integer calories3 for method 3.
+
+OUTPUT FORMAT
+ Three integers: result from method 1 (calories2 × 1.5, rounded down), result from method 2 (fixed 30), result from method 3 (calories3 × 1.5 + 30, rounded down).
+ Two integers: member ID (via getter) and calories (via getter).
+
+TESTCASE-1
+ Input
+ 101
+ 100
+ 50
+ 0
+ 25
+ Output
+ 75
+ 30
+ 67
+ 101
+ 100
+ Explanation
+ 75 is obtained by floor(50 × 1.5) = floor(75.0) = 75
+ 30 is the fixed value from method 2
+ 67 is obtained by floor(25 × 1.5 + 30) = floor(67.5) = 67
+ 101 is returned from getMemberId()
+ 100 is returned from getCalories()
+
+TESTCASE-2
+ Input
+ 200
+ 200
+ 100
+ 0
+ 50
+ Output
+ 150
+ 30
+ 105
+ 200
+ 200
+ Explanation
+ 150 is floor(100 × 1.5) = 150
+ 30 is fixed value
+ 105 is floor(50 × 1.5 + 30) = 105
+ 200 is member ID
+ 200 is calories
+
+TESTCASE-3
+ Input
+ 300
+ 600
+ 666
+ 0
+ 400
+ Output
+ 999
+ 30
+ 630
+ 300
+ 600
+ Explanation
+ 999 is floor(666 × 1.5) = 999 (capped below 1000)
+ 30 is fixed
+ 630 is floor(400 × 1.5 + 30) = 630
+ 300 is member ID
+ 600 is calories
+-----------------------------------------------------------------------------------------------------------
+ Question-2)
+ HopeFund — Corporate Donations
+
+SCENARIO QUESTION
+ At HopeFund, volunteer Ava is creating a Java program to track donations. She needs a superclass Donation with private variables for donor ID and amount, accessed via public getters and setters. A subclass CorporateDonation extends Donation, using super to access these variables. The subclass includes methods to compute matched donations, called from main(). The private variables secure donor data. Methods compute: amount × 4, a fixed 40 match, or amount × 4 + 40. Ava needs matches capped at 10000 for reporting. With a fundraising event nearing, accuracy is key. Can you help Ava write a Java program with a superclass, subclass using super, and methods to compute matches?
+
+
+INPUT FORMAT
+ First line: An integer id (donor ID for setter via super).
+ Second line: An integer amount (amount for setter via super).
+ Third line: An integer amount2 for method 1.
+ Fourth line: An integer for method 2 (fixed match).
+ Fifth line: An integer amount3 for method 3.
+
+
+OUTPUT FORMAT
+ Three integers: result from method 1 (amount2 × 4), method 2 (fixed 40), method 3 (amount3 × 4 + 40).
+ Two integers: donor ID (via getter) and amount (via getter).
+
+
+TESTCASE-1
+
+ Input
+ 101
+ 100
+ 50
+ 0
+ 25
+
+ Output
+ 200
+ 40
+ 140
+ 101
+ 100
+
+ Explanation
+ 200 is calculated as 50 × 4 = 200
+ 40 is the fixed match
+ 140 is calculated as 25 × 4 + 40 = 100 + 40 = 140
+ 101 is returned from getDonorId()
+ 100 is returned from getAmount()
+
+
+TESTCASE-2
+ Input
+ 200
+ 200
+ 100
+ 0
+ 50
+ Output
+ 400
+ 40
+ 240
+ 200
+ 200
+
+ Explanation
+ 400 is 100 × 4 = 400
+ 40 is fixed match
+ 240 is 50 × 4 + 40 = 200 + 40 = 240
+ 200 is donor ID
+ 200 is amount
+
+
+TESTCASE-3
+ Input
+ 300
+ 2500
+ 2500
+ 0
+ 1000
+
+ Output
+ 10000
+ 40
+ 4040
+ 300
+ 2500
+
+ Explanation
+ 10000 is 2500 × 4 = 10000 (capped at 10000)
+ 40 is fixed match
+ 4040 is 1000 × 4 + 40 = 4000 + 40 = 4040 (capped still under 10000)
+ 300 is donor ID
+ 2500 is amount
+---------------------------------------------------------------------------------------------------------
+Question-3)
+Question: Student Grade Analysis using Inheritance and Encapsulation
+At StudyWell School, teacher Mia is building a Java program to analyze student grades.
+ She needs a superclass Student with private variables for student ID and an array of grades,
+ accessed through public getters and setters to ensure data security.
+A subclass HonorsStudent extends Student, using super to access these variables.
+The subclass includes methods to compute:
+Average grade – average of given array (rounded down, capped at 100)
+
+
+Adjusted grade – grade + 15 (capped at 100)
+
+
+Bonus average – average of given array + 10 (rounded down, capped at 100)
+
+
+These methods are called from the main() method.
+ Finally, print the student ID and the sum of grades (via superclass getters).
+Input Format
+First line: An integer id (student ID for setter via super)
+Second line: An integer n followed by n space-separated integers (grades for setter via super)
+Third line: An integer n2 followed by n2 space-separated integers (for method 1)
+Fourth line: An integer grade (for method 2)
+Fifth line: An integer n3 followed by n3 space-separated integers (for method 3)
+
+Output Format
+Three integers:
+    Method 1 → average of array (rounded down, capped at 100)
+    Method 2 → grade + 15 (capped at 100)
+    Method 3 → average of array + 10 (rounded down, capped at 100)
+Two integers:
+    Student ID (via getter)
+    Sum of grades array (via getter)
+
+Test Case 1
+Input:
+201
+4 80 75 90 85
+3 70 80 90
+88
+4 85 95 80 90
+
+Explanation:
+Student ID = 201
+Grades = [80, 75, 90, 85] → Sum = 330
+Method 1:
+ [70, 80, 90] → (70+80+90)/3 = 80 → capped = 80
+Method 2:
+ 88 + 15 = 103 → capped at 100
+Method 3:
+ (85+95+80+90)/4 = 87 → 87 + 10 = 97 → capped = 97
+ Output:
+80
+100
+97
+201
+330
+
+Test Case 2
+Input:
+202
+3 60 70 80
+4 90 95 100 85
+96
+2 88 92
+
+Explanation:
+Student ID = 202
+Grades = [60, 70, 80] → Sum = 210
+Method 1:
+ (90+95+100+85)/4 = 92 → capped = 92
+Method 2:
+ 96 + 15 = 111 → capped = 100
+Method 3:
+ (88+92)/2 = 90 → 90 + 10 = 100 → capped = 100
+ Output:
+92
+100
+100
+202
+210
+
+Test Case 3
+Input:
+203
+5 50 55 60 65 70
+3 100 100 100
+90
+3 80 85 90
+
+Explanation:
+Student ID = 203
+Grades = [50, 55, 60, 65, 70] → Sum = 300
+Method 1:
+ (100+100+100)/3 = 100 → capped = 100
+Method 2:
+ 90 + 15 = 105 → capped = 100
+Method 3:
+ (80+85+90)/3 = 85 → 85 + 10 = 95 → capped = 95
+ Output:
+100
+100
+95
+203
+300
+============================================================================================================
+Question-4)
+Student and Person (using super(name))
+ Scenario
+At CodeAcademy, a developer is creating a program demonstrating how a subclass calls a superclass constructor using super().
+ A subclass Student calls the superclass Person constructor with a name using super(name).
+ The Person class has a constructor taking a string name and prints "Name: {name}".
+ Student extends Person, takes a name input, and calls super(name).
+ The goal is to input a name and print the message through the superclass constructor.
+Input Format
+A single string name.
+
+ Output Format
+Print "Name: {name}" where {name} is the input string.
+
+Testcase 1
+Input
+Alice
+Output
+Name: Alice
+Explanation:
+ The Student constructor calls super("Alice").
+ Person constructor executes and prints "Name: Alice".
+
+Testcase 2
+Input
+Bob
+Output
+Name: Bob
+Explanation:
+ The input name "Bob" is passed to the superclass constructor, which prints the message.
+
+Testcase 3
+Input
+Diana
+Output
+Name: Diana
+Explanation:
+ When the Student object is created, the superclass Person constructor prints "Name: Diana".
+
+----------------------------------------------------------------------------------------------------------
+Question-5)
+Employee and Worker (using super(id, salary))
+ Scenario
+Write a program where a subclass Employee calls a superclass Worker constructor with two parameters using super(id, salary).
+ Worker takes id (int) and salary (int), printing
+ID: {id}, Salary: {salary}
+
+Employee extends Worker, takes id and salary as input, and calls super(id, salary).
+ The program should output the result printed by the superclass.
+
+Input Format
+Two integers — id and salary (separated by space or newline).
+
+ Output Format
+Print "ID: {id}, Salary: {salary}".
+
+Testcase 1
+Input
+101
+500
+Output
+ID: 101, Salary: 500
+Explanation:
+ Employee calls super(101, 500), invoking the Worker constructor that prints the message.
+
+Testcase 2
+Input
+104
+800
+Output
+ID: 104, Salary: 800
+Explanation:
+ Both id and salary are passed to the superclass constructor, and it prints accordingly.
+
+Testcase 3
+Input
+105
+900
+Output
+ID: 105, Salary: 900
+Explanation:
+ Superclass Worker constructor runs and displays ID and Salary details.
+ =====================================================================================================
+ 
