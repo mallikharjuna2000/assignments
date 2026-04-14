@@ -4871,3 +4871,779 @@ Overall max = -10
 Row 0 → max = -100
 Column 1 → max = -20
 ------------------------------------------------------------------------------------------------------------
+Day-23 Encapsulation
+=====================
+Question-1️) At CityLibrary, librarian Emma is developing a Java program to calculate fines for overdue books.
+ She needs a class with:
+Private variables for bookID and overdueDays
+Getters and setters to access and modify values safely
+Methods to compute three types of fines:
+
+
+ Fine Methods:
+fineByDays(int days) → days × 5
+fixedFine() → always 10
+fineByDaysPlusFixed(int days) → days × 5 + 10
+
+
+ Additional Requirement:
+All fines must be capped at 1000 (maximum limit)
+
+
+This ensures billing does not overflow or produce unrealistic values during periods of high overdue returns.
+Input Format
+First line  : bookID (integer)
+Second line : overdueDays (integer)
+Third line  : days2 → for fineByDays()
+Fourth line : dummy integer → for fixedFine()
+Fifth line  : days3 → for fineByDaysPlusFixed()
+
+Output Format
+Output 1: fineByDays(days2)
+Output 2: fixedFine()
+Output 3: fineByDaysPlusFixed(days3)
+Output 4: bookID (via getter)
+Output 5: overdueDays (via getter)
+
+Sample TestCase–1
+➤ Input
+101
+10
+5
+0
+3
+➤ Output
+25
+10
+25
+101
+10
+ Explanation
+fineByDays(5) → 5 × 5 = 25
+fixedFine() → 10
+fineByDaysPlusFixed(3) → (3 × 5) + 10 = 25
+Print bookID → 101
+Print overdueDays → 10
+
+
+Sample TestCase–2
+➤ Input
+200
+20
+10
+0
+5
+➤ Output
+50
+10
+35
+200
+20
+ Explanation
+fineByDays(10) → 10 × 5 = 50
+fixedFine() → 10
+fineByDaysPlusFixed(5) → (5 × 5) + 10 = 35
+Print bookID → 200
+Print overdueDays → 20
+
+
+Sample TestCase–3
+➤ Input
+300
+50
+20
+0
+10
+➤ Output
+100
+10
+60
+300
+50
+
+ Explanation
+fineByDays(20) → 20 × 5 = 100
+fixedFine() → 10
+fineByDaysPlusFixed(10) → (10 × 5) + 10 = 60
+Print bookID → 300
+Print overdueDays → 50
+-------------------------------------------------------------------------------------------------------------
+Question–2: FitLife Gym – Steps to Calories Tracker
+ Scenario Question
+At FitLife Gym, trainer Jake is building a Java program to track daily steps.
+ He needs a class with:
+Private variables for memberID and steps
+Getters and setters
+Methods to compute calories burned:
+
+
+ Calculation Methods
+calcFromSteps(int steps) → steps × 0.05 (rounded down to integer)
+calcFixed() → always 10 calories
+calcStepsPlusFixed(int steps) → steps × 0.05 + 10 (rounded down)
+
+
+ Additional Requirement
+Maximum calories must be capped at 1000
+This ensures safe calorie tracking during fitness challenges.
+Input Format
+First line  : memberID
+Second line : steps (for setter)
+Third line  : steps2 (for method 1)
+Fourth line : dummy input for method 2
+Fifth line  : steps3 (for method 3)
+
+Output Format
+calcFromSteps(steps2)
+calcFixed()
+calcStepsPlusFixed(steps3)
+memberID (getter)
+steps (getter)
+
+Sample TestCase–1
+➤ Input
+101
+1000
+2000
+0
+3000
+➤ Output
+100
+10
+160
+101
+1000
+ Explanation
+2000 × 0.05 = 100
+Fixed = 10
+(3000 × 0.05) + 10 = 160
+memberID = 101
+steps = 1000
+
+
+Sample TestCase–2
+➤ Input
+200
+5000
+4000
+0
+2000
+➤ Output
+200
+10
+110
+200
+5000
+ Explanation
+4000 × 0.05 = 200
+10 fixed
+2000 × 0.05 + 10 = 110
+
+
+Sample TestCase–3
+➤ Input
+300
+10000
+20000
+0
+10000
+➤ Output
+1000
+10
+510
+300
+10000
+Explanation
+20000 × 0.05 = 1000 (capped)
+10 fixed
+10000 × 0.05 + 10 = 510
+----------------------------------------------------------------------------------------------------------
+Question–3: PetPalace – Pet Food Cost Calculator
+Scenario Question
+At PetPalace, owner Sophie is developing a Java application to calculate pet food costs.
+ She needs a class with:
+Private variables → petID, quantity (kg)
+Getters & Setters
+Methods:
+
+
+ Cost Methods
+computeCostByQuantity(int q) → q × 2
+computeFixedCost() → 15
+computeQuantityPlusFixed(int q) → (q × 2) + 15
+
+
+ All costs must be capped at 1000
+Input Format
+petID
+quantity
+quantity2
+dummy input for method 2
+quantity3
+
+Output Format
+c1
+c2
+c3
+petID
+quantity
+
+Sample TestCase–1
+➤ Input
+101
+50
+100
+0
+25
+
+➤ Output
+200
+15
+65
+101
+50
+
+ Explanation
+100 × 2 = 200
+fixed = 15
+25×2 + 15 = 65
+
+
+
+ TestCase–2
+➤ Input
+200
+100
+200
+0
+50
+➤ Output
+400
+15
+115
+200
+100
+
+TestCase–3
+➤ Input
+300
+250
+500
+0
+100
+➤ Output
+1000
+15
+1000
+300
+250
+---------------------------------------------------------------------------------------------------------
+QUESTION 4: HopeFund – Donation Match Calculator 
+At HopeFund, volunteer Ava is creating a Java program to track donations. She needs a class with private variables for donor ID and donation amount, accessible via getters and setters. The class includes methods to compute matched donations based on amount, a fixed match, or both, called from main(). The private variables secure donor data. Methods compute: amount × 2, a fixed 50 match, or amount × 2 + 50. Ava needs matches capped at 10000 for reporting. With a fundraising event nearing, accuracy is key. Can you help Ava write a Java class with private variables, getters, setters, and methods to compute matches?
+Input Format
+First line: donor ID
+Second line: donation amount
+Third line: amount2 (for method 1)
+Fourth line: dummy input (for method 2)
+Fifth line: amount3 (for method 3)
+
+
+ Output Format
+match using method 1 (amount2 × 2)
+match using method 2 (fixed 50)
+match using method 3 (amount3 × 2 + 50)
+donor ID
+donation amount
+
+
+Sample Testcase–1
+ Input
+101
+100
+50
+0
+25
+
+
+ Output
+100
+50
+100
+101
+100
+
+
+ Explanation
+Method 1 → 50 × 2 = 100
+Method 2 → fixed = 50
+Method 3 → (25 × 2) + 50 = 100
+donorID = 101
+amount = 100
+
+
+Sample Testcase–2
+ Input
+200
+200
+100
+0
+50
+
+
+ Output
+200
+50
+150
+200
+200
+
+ Explanation
+100×2 = 200
+50 fixed
+50×2 + 50 = 150
+
+
+Sample Testcase–3
+ Input
+300
+2500
+5000
+0
+1000
+
+
+ Output
+10000
+50
+2050
+300
+2500
+
+ Explanation
+5000×2 = 10000 → capped
+fixed = 50
+1000×2 + 50 = 2050
+---------------------------------------------------------------------------------------------------
+Question-5) GadgetHub — Inventory Stock Value Calculator
+Question (Exact Scenario)
+At GadgetHub, manager Alex is developing a Java program to calculate stock values. He needs a class with private variables for inventory ID and an array of item prices, accessible via getters and setters. The class includes methods to compute total stock value, a single item’s adjusted value, or array sum with a fixed amount, called from main(). The private variables secure inventory data. Methods compute: array sum, single price × 1.1, and array sum + 100. Alex needs values capped at 10000 for reporting. With a sale nearing, accuracy is crucial. Can you help Alex write a Java class with private variables, getters, setters, and methods to compute stock values?
+
+Input Format
+First line: An integer id (inventory ID).
+Second line: An integer n and n space-separated integers (prices for setter).
+Third line: An integer n2 and n2 space-separated integers for method 1.
+Fourth line: An integer price for method 2.
+Fifth line: An integer n3 and n3 space-separated integers for method 3.
+
+Output Format
+Three integers: value from method 1 (array sum), method 2 (price × 1.1, rounded down), method 3 (array sum + 100).
+Two values: inventory ID (via getter) and sum of prices array (via getter).
+
+Testcase 1
+Input:
+101
+3 100 200 300
+2 150 250
+200
+1 300
+Output:
+400
+220
+400
+101
+600
+
+Explanation:
+Method1: 150 + 250 = 400
+Method2: 200 × 1.1 = 220
+Method3: 300 + 100 = 400
+Getter ID: 101
+Getter prices sum: 100 + 200 + 300 = 600
+
+
+Testcase 2
+Input:
+200
+2 500 1000
+1 400
+100
+2 200 300
+Output:
+400
+110
+600
+200
+1500
+
+Explanation:
+Method1: 400
+Method2: 100 × 1.1 = 110
+Method3: 200 + 300 + 100 = 600
+Getter ID: 200
+Getter prices sum: 1500
+
+
+Testcase 3
+Input:
+400
+4 1000 2000 3000 4000
+2 1000 1000
+500
+1 1000
+Output:
+2000
+550
+1100
+400
+10000
+
+Explanation:
+Method1: 2000
+Method2: 500 × 1.1 = 550
+Method3: 1000 + 100 = 1100
+Getter ID: 400
+Getter sum: 10000 (capped at 10000)
+-----------------------------------------------------------------------------------------------------------
+Question-6) StudyWell School — Student Grades Calculator
+
+Question (Exact Scenario)
+At StudyWell School, teacher Mia is building a Java program to compute student grades. She needs a class with private variables for student ID and an array of grades, accessible via getters and setters. The class includes methods to compute average grade, adjust a single grade, or average with a bonus, called from main(). The private variables protect student data. Methods compute: array average, grade + 5, and array average + 10. Mia needs grades capped at 100 for fairness. With report cards due, accuracy is vital. Can you help Mia write a Java class with private variables, getters, setters, and methods to compute grades?
+Input Format
+First line: An integer id (student ID).
+Second line: An integer n and n space-separated integers (grades for setter).
+Third line: An integer n2 and n2 space-separated integers for method 1.
+Fourth line: An integer grade for method 2.
+Fifth line: An integer n3 and n3 space-separated integers for method 3.
+
+Output Format
+Three integers: average from method 1 (array average, rounded down), method 2 (grade + 5), method 3 (array average + 10, rounded down).
+Two values: student ID (via getter) and sum of grades array (via getter).
+
+Testcase 1
+Input:
+101
+3 60 70 80
+2 50 50
+70
+1 100
+Output:
+50
+75
+100
+101
+210
+
+Explanation:
+Method1: avg(50,50)=50
+Method2: 70+5=75
+Method3: avg(100)+10=110 → capped 100
+Getter ID=101
+Getter sum=210
+
+
+Testcase 2
+Input:
+200
+2 50 50
+1 80
+60
+2 90 90
+Output:
+80
+65
+100
+200
+100
+
+Explanation:
+avg(80)=80
+60+5=65
+avg(90,90)+10=100 (capped)
+Getter ID=200
+Sum=100
+
+
+Testcase 3
+Input:
+500
+3 90 90 90
+1 100
+85
+2 80 80
+Output:
+100
+90
+100
+500
+270
+
+Explanation:
+avg(100)=100
+85+5=90
+avg(80,80)+10=90 → capped=90
+Getter ID=500
+Sum=270
+------------------------------------------------------------------------------------------------------------
+Question-7) LogiCorp — Package Weight Tracker
+
+Question (Exact Scenario)
+At LogiCorp, supervisor Ryan needs a Java program to manage shipment weights.
+ He wants a class with private variables for shipment ID and an array of package weights, accessible via getters and setters.
+ The class includes methods to compute:
+the total shipment weight,
+a single package’s adjusted weight (weight × 1.05), and
+the total weight + 50 kg fixed cost.
+
+
+If the total exceeds 5000 kg, it must be capped at 5000.
+ Accuracy is critical before dispatch, so Ryan wants all methods implemented carefully.
+
+Input Format
+First line: An integer id (shipment ID)
+Second line: An integer n and n space-separated integers (weights for setter)
+Third line: An integer n2 and n2 space-separated integers for method 1
+Fourth line: An integer single weight for method 2
+Fifth line: An integer n3 and n3 space-separated integers for method 3
+
+Output Format
+Three integers: 
+method 1 (array total), 
+method 2 (adjusted weight ×1.05), 
+method 3 (total + 50)
+Then: shipment ID and total of setter weights.
+
+Testcase 1
+Input:
+500
+3 1000 2000 500
+2 100 200
+400
+1 300
+Output:
+300
+420
+350
+500
+3500
+
+Explanation:
+Method1: 100+200=300
+Method2: 400×1.05=420
+Method3: 300+50=350
+ID=500
+Sum=1000+2000+500=3500
+
+
+Testcase 2
+Input:
+200
+2 2500 3000
+1 1000
+4000
+2 1000 2000
+Output:
+1000
+4200
+3050
+200
+5000
+
+Explanation:
+Method1: 1000
+Method2: 4000×1.05=4200
+Method3: (1000+2000)+50=3050
+Total setter=5500 → capped at 5000
+
+
+Testcase 3
+Input:
+100
+4 1000 1000 1000 1000
+2 500 500
+200
+3 200 200 200
+Output:
+1000
+210
+650
+100
+4000
+
+Explanation:
+Method1: 500+500=1000
+Method2: 200×1.05=210
+Method3: 200+200+200+50=650
+Total setter sum=4000
+------------------------------------
+Question-8)  CityLibrary — Loan Tracker
+
+Question 
+At CityLibrary, librarian Sara wants a Java program to manage loan records.
+ She needs a class with private variables for member ID and an array of loan days per book.
+ The program should compute:
+total loan days,
+extended days for one book (+2 days),
+and total loan days + 5 for system overhead.
+
+
+If total exceeds 365 days, it should be capped at 365.
+
+Input Format
+First line: An integer id (member ID)
+Second line: An integer n and n space-separated integers (loan days for setter)
+Third line: An integer n2 and n2 space-separated integers for method 1
+Fourth line: An integer single loan day for method 2
+Fifth line: An integer n3 and n3 space-separated integers for method 3
+
+Output Format
+Three integers: total days (method1), extended day (method2), total + 5 (method3)
+Then member ID and total days from setter.
+
+Testcase 1
+Input:
+10
+3 10 20 30
+2 5 5
+10
+1 50
+Output:
+10
+12
+55
+10
+60
+
+Explanation:
+Method1: 5+5=10
+Method2: 10+2=12
+Method3: 50+5=55
+Setter sum=60
+
+
+Testcase 2
+Input:
+50
+2 100 200
+1 150
+364
+2 100 100
+Output:
+150
+366
+205
+50
+300
+
+Explanation:
+150
+364+2=366 (capped at 365 but displayed before cap in method2)
+100+100+5=205
+Sum=300
+
+
+Testcase 3
+Input:
+99
+4 90 90 90 90
+2 100 150
+200
+3 100 100 100
+Output:
+250
+202
+305
+99
+360
+
+Explanation:
+Method1: 100+150=250
+Method2: 200+2=202
+Method3: 100+100+100+5=305
+Sum=360
+------------------------------------------------------------------------------------------------------------
+Question-9)ArtWorld Museum — Visitor Counter
+
+Question 
+At ArtWorld Museum, curator Lily needs a Java program to manage visitor counts.
+ The museum records daily visitor numbers and must compute:
+total visitors for given days,
+adjusted visitors for a day (+10%),
+and total visitors + 500 for event visitors.
+
+
+The count should never exceed 100000 visitors.
+
+Input Format
+First line: An integer id (museum ID)
+Second line: An integer n and n space-separated integers (daily visitors)
+Third line: An integer n2 and n2 space-separated integers for method 1
+Fourth line: An integer single day visitor count for method 2
+Fifth line: An integer n3 and n3 space-separated integers for method 3
+
+Output Format
+Three integers: method1 total, method2 adjusted visitors, method3 total+500
+Then museum ID and total visitors (via getter)
+
+Testcase 1
+Input:
+1
+3 1000 2000 3000
+2 500 500
+1000
+1 2000
+Output:
+1000
+1100
+2500
+1
+6000
+
+Explanation:
+Method1: 500+500=1000
+Method2: 1000+10%=1100
+Method3: 2000+500=2500
+Sum=6000
+
+
+Testcase 2
+Input:
+99
+2 40000 70000
+2 10000 10000
+50000
+1 20000
+Output:
+20000
+55000
+20500
+99
+100000
+
+Explanation:
+Method1: 20000
+Method2: 50000×1.1=55000
+Method3: 20000+500=20500
+Total=40000+70000=110000 → capped at 100000
+
+
+Testcase 3
+Input:
+50
+4 5000 5000 5000 5000
+3 1000 2000 3000
+1000
+2 4000 4000
+
+Output:
+6000
+1100
+8500
+50
+20000
+
+Explanation:
+Method1: 6000
+Method2: 1000×1.1=1100
+Method3: 4000+4000+500=8500
+Sum=20000
+=================================================================================================
