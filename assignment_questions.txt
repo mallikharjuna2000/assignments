@@ -6258,3 +6258,208 @@ Output
 
 Explanation:
  Superclass reference points to Motorcycle object → method resolved at runtime.
+ =====================================================================================================
+ 
+Explanation:
+Superclass reference points to Motorcycle object → method resolved at runtime.
+===============================================================================================================
+Day-26 toString and equals() method
+-----------------------------------
+Question 1 — Employee class (toString override)
+ Scenario
+Create a class Employee with attributes name (String) and id (int), set through a parameterized constructor.
+ Override toString() to return "Employee: name, ID: id".
+
+Input Format
+First line: Employee name  
+Second line: Employee ID
+
+ Output Format
+Employee: <name>, ID: <id>
+
+Test Case 1
+Input
+John
+101
+
+Output
+Employee: John, ID: 101
+
+Explanation:
+ Constructor stores John and 101. toString() formats the output accordingly.
+
+Test Case 2
+Input
+Alice
+102
+
+Output
+Employee: Alice, ID: 102
+
+ Test Case 3
+Input
+Bob
+103
+
+Output
+Employee: Bob, ID: 103
+------------------------------------------------------------------------------------------------------------
+Question-2)
+Laptop class (toString override)
+ Scenario
+Create a class Laptop with attributes brand (String) and ram (int) set via a constructor.
+ Override toString() to return "Laptop: brand, RAM: ram GB".
+Input Format
+First line: Laptop brand  
+Second line: RAM (in GB)
+
+ Output Format
+Laptop: <brand>, RAM: <ram> GB
+
+Test Case 1
+Input
+Dell
+16
+
+Output
+Laptop: Dell, RAM: 16 GB
+
+ Test Case 2
+Input
+Lenovo
+32
+
+Output
+Laptop: Lenovo, RAM: 32 GB
+
+ Test Case 3
+Input
+Acer
+64
+
+Output
+Laptop: Acer, RAM: 64 GB
+-----------------------------------------------------------------------------------------------------------
+Question-3)
+ Student class (equals() override)
+ Scenario
+Create a class Student with attributes id (int) and name (String).
+ Override equals() to compare two Student objects by both id and name.
+Input Format
+id1
+name1
+id2
+name2
+
+ Output Format
+TRUE if both id and name match, otherwise FALSE
+
+Test Case 1
+Input
+101
+Alice
+101
+Alice
+
+Output
+TRUE
+
+Explanation:
+ IDs and names match exactly.
+
+Test Case 2
+Input
+105
+Mallory
+105
+Eve
+
+Output
+FALSE
+
+Explanation:
+ IDs match but names differ → false.
+
+Test Case 3
+Input
+106
+Trudy
+106
+Trudy
+
+Output
+TRUE
+-----------------------------------------------------------------------------------------------------------
+Question-4)
+ Rectangle class (equals() override)
+ Scenario
+Create a class Rectangle with attributes length and width (both double).
+ Override equals() to compare two Rectangles based on length and width (allowing for small floating-point errors).
+
+Input Format
+length1 width1
+length2 width2
+
+ Output Format
+TRUE if both length and width are equal, else FALSE
+
+Test Case 1
+Input
+5.0 3.0
+5.0 3.0
+
+Output
+TRUE
+
+ Test Case 2
+Input
+2.0 2.0
+2.0 3.0
+
+Output
+FALSE
+
+ Test Case 3
+Input
+4.0 4.0
+4.0 4.0
+
+Output
+TRUE
+---------------------------------------------------------------------------------------------------------
+ Question 5 — Employee class (equals() override with String + int)
+ Scenario
+Create a class Employee with attributes empId (int) and department (String).
+ Override equals() to compare two Employee objects based on both empId and department.
+
+Input Format
+empId1 department1
+empId2 department2
+
+ Output Format
+TRUE if both empId and department match, otherwise FALSE
+
+Test Case 1
+Input
+1001 HR
+1001 HR
+
+Output
+TRUE
+
+ Test Case 2
+Input
+1002 IT
+1002 HR
+
+Output
+FALSE
+
+ Test Case 3
+Input
+1003 Finance
+1003 Finance
+
+Output
+TRUE
+===========================================================================================================
