@@ -6463,3 +6463,230 @@ Input
 Output
 TRUE
 ===========================================================================================================
+Output
+TRUE
+===========================================================================================================
+Dya-27 Abstract class and methods and final modifiers problems
+=============================================================
+Question-1)
+Problem Statement:
+Create an abstract class Employee with the following features:
+A field: name (String)
+
+
+A constructor to initialize name
+
+
+An abstract method: double calculateSalary()
+
+
+A concrete method: void display() which prints the employee's name
+
+
+Then, implement the following subclasses:
+FullTimeEmployee
+
+
+Fields: monthlySalary
+
+
+Method: calculateSalary() returns monthly salary.
+
+
+PartTimeEmployee
+
+
+Fields: hourlyRate, hoursWorked
+
+
+Method: calculateSalary() returns hourlyRate * hoursWorked
+
+
+ContractEmployee
+
+
+Fields: contractAmount
+
+
+Method: calculateSalary() returns the contract amount
+
+
+In the Main class, create objects of all three types and display the salary details using the polymorphic approach.
+-------------------------------------------------------------------------------------------------------------
+Question-2)
+Create a final class Calculator with
+a final variable FACTOR = 2
+
+
+a final method getResult(number, code)
+
+
+If code = 1 → multiply number × FACTOR
+ If code = 2 → divide number / FACTOR (integer division).
+Input Format
+number
+operationCode
+
+ Output Format
+Result of operation as integer
+
+Test Case 1
+Input
+10
+1
+
+Output
+20
+
+Explanation: Multiply by 2.
+
+Test Case 2
+Input
+8
+2
+
+Output
+4
+
+Explanation: Integer division 8 / 2 = 4.
+
+Test Case 3
+Input
+6
+1
+
+Output
+12
+
+Explanation: 6 × 2 = 12.
+--------------------------------------------------------------------------------------------------------
+Question-3)
+-----------
+Write a Java program with an abstract class Instrument that has an abstract method getSound().
+ Create two concrete subclasses, Guitar and Drum, that implement getSound().
+ The program reads an instrument type ("Guitar" or "Drum") on one line.
+ Output the instrument’s sound: "Strum" for Guitar, "Beat" for Drum.
+
+Input Format
+A single string representing the instrument type ("Guitar" or "Drum")
+
+ Output Format
+Output the sound of the instrument:
+"Strum" for Guitar
+"Beat" for Drum
+
+Testcase 1
+Input
+Guitar
+
+Output
+Strum
+
+Explanation:
+ When the input is "Guitar", the subclass Guitar is created, and getSound() returns "Strum".
+
+Testcase 2
+Input
+Drum
+
+Output
+Beat
+
+Explanation:
+ When the input is "Drum", a Drum object is created, and getSound() returns "Beat".
+
+Testcase 3
+Input
+Guitar
+
+Output
+Strum
+
+Explanation:
+ Abstract method getSound() is implemented in Guitar, producing "Strum".
+
+---------------------------------------------------------------------------------------------------------
+Question-4)
+Write a Java program with an abstract class Gadget that has an abstract method getUse().
+ Create two concrete subclasses, Phone and Laptop, that implement getUse().
+ The program reads a gadget type ("Phone" or "Laptop") on one line.
+ Output the gadget’s use: "Call" for Phone, "Work" for Laptop.
+Input Format
+"Phone" or "Laptop"
+
+ Output Format
+"Call" for Phone
+"Work" for Laptop
+
+Testcase 1
+Input
+Phone
+
+Output
+Call
+
+Explanation:
+ Subclass Phone returns "Call" when getUse() is called.
+
+Testcase 2
+Input
+Laptop
+
+Output
+Work
+
+Explanation:
+ Subclass Laptop overrides getUse() to return "Work".
+
+Testcase 3
+Input
+Phone
+
+Output
+Call
+
+Explanation:
+ Dynamic polymorphism ensures correct subclass is used.
+-------------------------------------------------------------------------------------------------------
+Question-5)
+Write a Java program with an abstract class Flower that has an abstract method getType().
+ Create two concrete subclasses, Rose and Lily, that implement getType().
+ The program reads a flower type ("Rose" or "Lily") on one line.
+ Output the flower’s type: "Red" for Rose, "White" for Lily.
+
+Input Format
+"Rose" or "Lily"
+
+ Output Format
+"Red" for Rose
+"White" for Lily
+
+Testcase 1
+Input
+Rose
+
+Output
+Red
+
+Explanation:
+ Subclass Rose implements getType() returning "Red".
+
+Testcase 2
+Input
+Lily
+
+Output
+White
+
+Explanation:
+ Subclass Lily implements getType() returning "White".
+
+Testcase 3
+Input
+Rose
+
+Output
+Red
+
+Explanation:
+ Polymorphism ensures correct subclass implementation runs.
