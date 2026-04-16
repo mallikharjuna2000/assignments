@@ -6001,4 +6001,260 @@ ID: 105, Salary: 900
 Explanation:
  Superclass Worker constructor runs and displays ID and Salary details.
  =====================================================================================================
+ ID: 105, Salary: 900
+Explanation:
+Superclass Worker constructor runs and displays ID and Salary details.
+==========================================================================================================
+Day-25 Polymorphism Overriding
+=============================
+Question-1)
+You are tasked with implementing a 3D shape calculator in Java.
+• Design a class hierarchy with a base class Shape and two derived classes Cube and Cuboid.
+•  The Shape class should have a method calculateVolume() that prints "Calculating volume of Shape."
+•  The Cube class should override the calculateVolume() method to calculate and display the volume of a cube by taking any side (double) of the cube as input from the user.
+• The Cuboid class should also override the calculateVolume() method to calculate and display the volume of a cuboid by taking the length (double), width (double), and height (double) of the cuboid as input from the user.
  
+Input Format:
+•   For Cube: A double value representing the side of the cube.
+•  For Cuboid: Three double values representing the length, width, and height of the cuboid.
+ 
+Output Format:
+•  The output starts with Calculating volume of Shape from the base Shape class.
+•   Then, the volume of the cube is printed, rounded to 2 decimal places (e.g., Volume of Cube: 27.00).
+•   The volume of the cuboid is printed, also rounded to 2 decimal places (e.g., Volume of Cuboid: 120.00).
+ 
+Formulas:
+Volume of cube = (side)3
+Volume of the cuboid = length * width * height
+ 
+Note:
+• Print the volume up to 2 decimal places.
+• The main class has been provided to you in the editor.
+ 
+Sample Test Cases
+Test Case 1
+ Side of the cube:
+9.2
+Volume of Cube: 778.69
+Length of the cuboid:
+1.2
+Width of the cuboid:
+5.0
+Height of the cuboid:
+2.0
+Volume of Cuboid: 12.00
+
+
+Test Case 2
+Side of the cube:
+14.0
+Volume of Cube: 2744.00
+Length of the cuboid:
+2.0
+Width of the cuboid:
+3.0
+Height of the cuboid:
+1.0
+Volume of Cuboid: 6.00
+ 
+Test Case 3  
+Side of the cube:
+2.5
+Volume of Cube: 15.63
+Length of the cuboid:
+6.2
+Width of the cuboid:
+6.1
+Height of the cuboid:
+6.3
+Volume of Cuboid: 238.27
+ 
+Test Case 4 
+Side of the cube:
+14.2
+Volume of Cube: 2863.29
+Length of the cuboid:
+5.2
+Width of the cuboid:
+6.2
+Height of the cuboid:
+3.2
+Volume of Cuboid: 103.17
+=============================================================================================================
+Question-2)
+Create a class named Appointment with a method schedule(). This method should print "Scheduling an appointment".
+ 
+Create a subclass DoctorAppointment that extends Appointment. Override the schedule() method in the DoctorAppointment class to prompt the user for input. Ask the user to input the specialization (String) and print "Doctor appointment scheduled for {specialization}".
+ 
+Create another subclass DentistAppointment that also extends Appointment. Override the schedule() method in the DentistAppointment class to prompt the user for input. Ask the user to input the dental procedure (String) and print "Dentist appointment scheduled for {procedure}".
+  
+Note: The main class has been provided to you in the editor.
+ 
+Test Case 1
+Input:
+Orthopedics
+Root Canal
+
+
+Output:
+Scheduling an appointment
+Specialization: Orthopedics
+Doctor appointment scheduled for Orthopedics
+Dental procedure: Root Canal
+Dentist appointment scheduled for Root Canal
+
+
+Test Case 2
+Input:
+Cardiology
+Braces Fixing
+
+
+Output:
+Scheduling an appointment
+Specialization: Cardiology
+Doctor appointment scheduled for Cardiology
+Dental procedure: Braces Fixing
+Dentist appointment scheduled for Braces Fixing
+
+
+Test Case 3
+Input:
+Dermatology
+Teeth Cleaning
+
+
+Output:
+Scheduling an appointment
+Specialization: Dermatology
+Doctor appointment scheduled for Dermatology
+Dental procedure: Teeth Cleaning
+Dentist appointment scheduled for Teeth Cleaning
+=============================================================================================================
+Question-3)
+Question 1 — Shape and Circle (using Dynamic Method Dispatch)
+Create a base class Shape with a method getArea() that returns 0.0.
+ Create a derived class Circle that overrides getArea() to return the area of a circle (π × radius²).
+ Use dynamic method dispatch to call getArea() on a Shape reference pointing to a Circle object.
+
+ Input Format
+A single double value – radius of the circle.
+
+ Output Format
+Print "Area of Circle: <value>" rounded to 2 decimal places.
+
+Testcase 1
+Input
+5
+
+Output
+Area of Circle: 78.54
+
+Explanation:
+ Area = π × 5² = 78.5398 ≈ 78.54.
+
+Testcase 2
+Input
+2.5
+
+Output
+Area of Circle: 19.63
+
+Explanation:
+ Area = 3.1416 × 2.5² = 19.63.
+
+Testcase 3
+Input
+10
+
+Output
+Area of Circle: 314.16
+
+Explanation:
+ Area = π × 10² = 314.159 ≈ 314.16.
+====================================================================================================
+Question-4)
+Animal and Elephant (using Dynamic Method Dispatch)
+ Scenario
+Create a base class Animal with a method getLifespan() that returns 0.
+ Create a derived class Elephant that overrides getLifespan() to return a given lifespan.
+ Use dynamic method dispatch to call getLifespan() on an Animal reference pointing to an Elephant.
+Input Format
+An integer – lifespan in years.
+
+ Output Format
+Print the lifespan.
+
+Testcase 1
+Input
+70
+
+Output
+70
+
+Explanation:
+ Elephant’s overridden getLifespan() returns 70.
+
+Testcase 2
+Input
+45
+
+Output
+45
+
+Explanation:
+ Animal animal = new Elephant(45); → method dispatch calls subclass version.
+
+Testcase 3
+Input
+100
+
+Output
+100
+
+Explanation:
+ Overridden method returns the provided lifespan value.
+ =========================================================================================================
+ Question-5)
+ Question 5 — Vehicle and Motorcycle (using Dynamic Method Dispatch)
+ Scenario
+Create a base class Vehicle with a method getSpeed() that returns 0.0.
+ Create a derived class Motorcycle that takes a speed parameter in its constructor and overrides getSpeed() to return that speed.
+ Use dynamic method dispatch to call getSpeed() on a Vehicle reference pointing to a Motorcycle.
+
+Input Format
+A double value – the speed of the motorcycle.
+
+ Output Format
+Print the speed.
+
+
+Testcase 1
+Input
+120.5
+
+Output
+120.5
+
+Explanation:
+ Overridden method in Motorcycle returns the given speed.
+
+Testcase 2
+Input
+39.1
+
+Output
+39.1
+
+Explanation:
+ Dynamic dispatch calls getSpeed() from child class.
+
+ Testcase 3
+Input
+12.6
+
+Output
+12.6
+
+Explanation:
+ Superclass reference points to Motorcycle object → method resolved at runtime.
