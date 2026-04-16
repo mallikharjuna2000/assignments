@@ -6690,3 +6690,217 @@ Red
 
 Explanation:
  Polymorphism ensures correct subclass implementation runs.
+ ====================================================================================================
+ 
+Explanation:
+Polymorphism ensures correct subclass implementation runs.
+===============================================================
+Day-28 String
+--------------
+Question-1
+-------------
+Write a program to check if two strings have the same length.
+Input Format
+ Two strings (each ≤ 100 characters)
+Output Format
+ Print "Yes" if both strings have equal length, otherwise "No"
+
+Sample Test Case 1
+Input
+Apple
+ Mango
+
+Output
+Yes
+
+Explanation
+ Both strings have length 5.
+
+Sample Test Case 2
+Input
+Cat
+ Dogs
+
+Output
+No
+
+Explanation
+ Lengths differ: 3 vs 4.
+
+Sample Test Case 3
+Input
+AB
+ Aaa
+
+Output
+No
+
+Explanation
+ Lengths differ: 2 vs 3.
+----------------------------------------------------------------------------------------------------
+Question-2)
+Write a program to check if a string starts with a given prefix.
+Input Format
+ Two strings: main string and prefix
+ (Main string ≤ 1000 characters, prefix ≤ 100)
+Output Format
+ Print "Yes" if the first string starts with the prefix, otherwise "No"
+
+Sample Test Case 1
+Input
+Programming
+ Pro
+
+Output
+Yes
+
+Explanation
+ The word “Programming” starts with “Pro”.
+
+Sample Test Case 2
+Input
+Test
+ Xx
+
+Output
+No
+
+Explanation
+ Prefix does not match at the start.
+
+Sample Test Case 3
+Input
+abc
+ de
+
+Output
+No
+
+Explanation
+ String “abc” does not start with “de”.
+ ------------------------------------------------------------------------------------------------------
+ Question-3)
+ Write a program to check if a string ends with a given suffix.
+Input Format
+ Two strings: main string and suffix
+ (Main string ≤ 1000 characters, suffix ≤ 100)
+Output Format
+ Print "Yes" if the first string ends with the suffix, otherwise "No"
+
+Sample Test Case 1
+Input
+Running
+ ing
+
+Output
+Yes
+
+Explanation
+ “Running” ends with “ing”.
+
+Sample Test Case 2
+Input
+Java
+ xX
+
+Output
+No
+
+Explanation
+ Suffix does not match case-sensitively.
+
+Sample Test Case 3
+Input
+Test
+ ab
+
+Output
+No
+
+Explanation
+ “Test” does not end with “ab”.
+------------------------------------------------------------------------------------------------
+Question-4)
+Write a program to compare two strings lexicographically ignoring case and return -1, 0, or 1.
+Input Format
+ Two strings (each ≤ 100 characters)
+Output Format
+ Print
+ -1 → if first string comes before second lexicographically
+ 0 → if both strings are equal ignoring case
+ 1 → if first string comes after the second
+
+Sample Test Case 1
+Input
+Apple
+ apple
+
+Output
+0
+
+Explanation
+ Both are equal ignoring case.
+
+Sample Test Case 2
+Input
+Java
+ python
+
+Output
+-1
+
+Explanation
+ “Java” comes before “python”.
+
+Sample Test Case 3
+Input
+cat
+ CAT
+
+Output
+0
+
+Explanation
+ Same letters ignoring case.
+
+--------------------------------------------------------------------------------------------------------
+Question-5)
+Write a program to concatenate two strings.
+Input Format
+ Two strings (each ≤ 200 characters)
+Output Format
+ Print concatenation of the two strings with no separator
+
+Sample Test Case 1
+Input
+Good
+ Morning
+
+Output
+GoodMorning
+
+Explanation
+ Join without separator.
+
+Sample Test Case 2
+Input
+Java
+ Code
+
+Output
+JavaCode
+
+Explanation
+ Concatenate strings.
+
+Sample Test Case 3
+Input
+A
+ B
+
+Output
+AB
+
+Explanation
+ Single-character concatenation.
+-----------------------------------------------------------------------------------------------------------
