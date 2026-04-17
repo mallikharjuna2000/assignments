@@ -6904,3 +6904,254 @@ AB
 Explanation
  Single-character concatenation.
 -----------------------------------------------------------------------------------------------------------
+
+Explanation
+Single-character concatenation.
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+Question-1)
+Write a program to count occurrences of a character in a string between given indices.
+Input Format
+ First line: the string
+ Second line: the character (single char)
+ Third line: start index (inclusive)
+ Fourth line: end index (exclusive)
+ (0 ≤ start < end ≤ string length)
+Output Format
+ Print the count of occurrences in the range
+Sample Test Case 1
+Input
+Mississippi
+ s
+ 2
+ 8
+Output
+4
+Explanation
+ Occurrences of 's' from index 2 to 7 (inclusive) are 4.
+Sample Test Case 2
+Input
+Programming
+ r
+ 1
+ 7
+Output
+2
+Explanation
+ Two 'r' characters between indices 1 and 6.
+Sample Test Case 3
+Input
+abcde
+ a
+ 0
+ 1
+Output
+1
+Explanation
+ 'a' appears once in range [0,1).
+---------------------------------------------------------------------------------------
+Question-2)
+---------------
+Write a program to extract a substring from a string given start and end indices.
+Input Format
+ First line: the string
+ Second line: start index (inclusive)
+ Third line: end index (exclusive)
+ (0 ≤ start < end ≤ string length)
+Output Format
+ Print the substring input.substring(start, end)
+Sample Test Case 1
+Input
+HelloWorld
+ 2
+ 7
+Output
+lloWo
+Explanation
+ Substring from index 2 to 6 is "lloWo".
+Sample Test Case 2
+Input
+Programming
+ 3
+ 8
+Output
+gramm
+Explanation
+ Substring indices 3..7 → "gramm".
+Sample Test Case 3
+Input
+Test
+ 0
+ 2
+Output
+Te
+Explanation
+ First two characters.
+-------------------------------------------------------------------------
+Question-3)
+-----------
+Write a program to find the longest common prefix between two strings.
+Input Format
+ Two strings (each ≤ 500 characters)
+Output Format
+ Print the longest common prefix (empty string allowed)
+Sample Test Case 1
+Input
+Flower
+ Flow
+Output
+Flow
+Explanation
+ Common prefix is “Flow”.
+Sample Test Case 2
+Input
+Test
+ Tell
+Output
+Te
+Explanation
+ Both begin with "Te".
+Sample Test Case 3
+Input
+abc
+ ab
+Output
+ab
+Explanation
+ Prefix match is "ab".
+---------------------------------------------------------------------------------------------------------
+Question-4)
+Write a program to check if a substring exists in a string.
+Input Format
+ Two strings: main string and substring
+ (main string ≤ 1000, substring ≤ 100)
+Output Format
+ Print "Yes" if substring exists, otherwise "No"
+Sample Test Case 1
+Input
+Programming
+ gram
+Output
+Yes
+Explanation
+ "gram" exists inside "Programming".
+Sample Test Case 2
+Input
+HelloWorld
+ World
+Output
+Yes
+Explanation
+ Substring is present.
+Sample Test Case 3
+Input
+Test
+ xyz
+Output
+No
+Explanation
+ Substring not found.
+-----------------------------------------------------------------------------------------------------
+Question-5)
+Write a program to insert a string into another string at a given position.
+Input Format
+ First line: original string
+ Second line: position (0 ≤ pos ≤ original length)
+ Third line: string to insert
+Output Format
+ Print updated string after insertion
+Sample Test Case 1
+Input
+Hello
+ 2
+ World
+Output
+HeWorldllo
+Explanation
+ Insert "World" after index 2.
+Sample Test Case 2
+Input
+Java
+ 0
+ Code
+Output
+CodeJava
+Explanation
+ Insert at the beginning.
+Sample Test Case 3
+Input
+abc
+ 0
+ A
+Output
+Aabc
+Explanation
+ "A" inserted at start.
+-------------------------------------------------------------------------------------------
+Question-6)
+Write a program to merge two strings by taking characters alternately.
+Input Format
+ Two strings (each ≤ 100 characters)
+Output Format
+ Print merged string (alternate characters; leftover appended)
+Sample Test Case 1
+Input
+abc
+ pqr
+Output
+apbqcr
+Explanation
+ Alternate characters then append remaining (none here).
+Sample Test Case 2
+Input
+Hello
+ World
+Output
+HWeolrllod
+Explanation
+ Merge alternately → leftover characters added.
+Sample Test Case 3
+Input
+ab
+ xyz
+Output
+axbyz
+Explanation
+ xyz is longer, 'z' appended at end.
+----------------------------------------------------------------------------------------------------------
+Question-7)
+Write a program to replace all occurrences of a character with another in a string.
+Input Format
+ First line: string
+ Second line: character to replace
+ Third line: replacement character
+Output Format
+ Print updated string after replacement
+Sample Test Case 1
+Input
+Banana
+ a
+ o
+Output
+Bonono
+Explanation
+ Replace all 'a' with 'o'.
+Sample Test Case 2
+Input
+Hello
+ l
+ p
+Output
+Heppo
+Explanation
+ All 'l' → 'p'.
+Sample Test Case 3
+Input
+abc
+ a
+ b
+Output
+bbc
+Explanation
+ Replace all 'a' with 'b'.
+=============================================================================================================
