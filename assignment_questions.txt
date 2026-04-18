@@ -7155,3 +7155,797 @@ bbc
 Explanation
  Replace all 'a' with 'b'.
 =============================================================================================================
+bbc
+Explanation
+Replace all 'a' with 'b'.
+=============================================================================================================
+Day-29 StringBuffer&Builder and some important String Program Examples
+===========================================================================
+Question–1
+Write a program to append two strings using StringBuffer.
+Input Format
+ Two strings
+Output Format
+ Print combined string using StringBuffer append()
+
+Sample Test Case 1
+Input
+ Fast
+ Track
+Output
+ FastTrack
+Explanation
+ Append first string and second string using StringBuffer.
+
+Sample Test Case 2
+Input
+ Code
+ Jam
+Output
+ CodeJam
+Explanation
+ StringBuffer append joins both strings.
+
+Sample Test Case 3
+Input
+ abc
+ xy
+Output
+ abcxy
+Explanation
+ Second string appended to first.
+------------------------------------------------------------------------------------------------
+Question–2
+Write a program to insert a string at a given index in a StringBuffer.
+Input Format
+ A base string
+ An integer index
+ A string to insert
+Output Format
+ Print updated string after insertion
+
+Sample Test Case 1
+Input
+ Good
+ 2
+ Day
+Output
+ GoDayod
+Explanation
+ Insert "Day" at index 2.
+
+Sample Test Case 2
+Input
+ Run
+ 1
+ Fast
+Output
+ RFastun
+Explanation
+ "Fast" inserted after first character.
+
+Sample Test Case 3
+Input
+ abc
+ 0
+ A
+Output
+ Aabc
+Explanation
+ Inserted at beginning.
+-----------------------------------------------------------------------------------------------------------
+Question–3
+Write a program to delete characters from a StringBuffer between given indices.
+Input Format
+ A string
+ Start index
+ End index
+Output Format
+ Print updated string after deletion
+
+Sample Test Case 1
+Input
+ Programming
+ 3
+ 7
+Output
+ Proming
+Explanation
+ Characters from index 3 to 6 removed.
+
+Sample Test Case 2
+Input
+ HelloWorld
+ 5
+ 10
+Output
+ Hello
+Explanation
+ Removed substring from index 5 to 9.
+
+Sample Test Case 3
+Input
+ abcde
+ 0
+ 2
+Output
+ cde
+Explanation
+ First two characters deleted.
+---------------------------------------------------------------------------------------------------
+Question–4
+Write a program to replace a range of characters in a StringBuffer with a new string.
+Input Format
+ A string
+ Start index
+ End index
+ Replacement string
+Output Format
+ Print updated string after replacement
+
+Sample Test Case 1
+Input
+ Hello
+ 1
+ 4
+ ii
+Output
+ Hiio
+Explanation
+ Replace characters at index 1,2,3 with "ii".
+
+Sample Test Case 2
+Input
+ Coding
+ 2
+ 5
+ de
+Output
+ Codeg
+Explanation
+ Replaces "din" → "de".
+
+Sample Test Case 3
+Input
+ abcde
+ 1
+ 3
+ xy
+Output
+ axyde
+Explanation
+ "bc" replaced with "xy".
+----------------------------------------------------------------------------------------------------------
+Question–5
+Write a program to append a number and a suffix to a StringBuffer.
+ Input Format
+ A base string
+ A number
+ A suffix string
+ Output Format
+ Print the final combined string
+Sample Test Case 1
+ Input
+ Score
+ 100
+ pts
+ Output
+ Score100pts
+ Explanation
+ Appends number (100) and suffix (pts) to base string.
+Sample Test Case 2
+ Input
+ Time
+ 5
+ sec
+ Output
+ Time5sec
+ Explanation
+ Base + number + suffix.
+Sample Test Case 3
+ Input
+ Rank
+ 0
+ th
+ Output
+ Rank0th
+ Explanation
+ Appended suffix.
+----------------------------------------------------------------------------------------
+ Question–6
+Write a program to append a string to a StringBuffer with a given prefix.
+ Input Format
+ A string
+ A prefix
+ Output Format
+ Print prefix + original string
+Sample Test Case 1
+ Input
+ Hello
+ Pre
+ Output
+ PreHello
+ Explanation
+ Prefix added before original string.
+Sample Test Case 2
+ Input
+ Code
+ Start
+ Output
+ StartCode
+ Explanation
+ Adds prefix “Start”.
+Sample Test Case 3
+ Input
+ abc
+ A
+ Output
+ Aabc
+ Explanation
+ Prefix added.
+----------------------------------------------------------------------------------------------------------------
+Write a program to delete the first occurrence of a substring from a StringBuffer.
+ Input Format
+ A string
+ A substring to delete
+ Output Format
+ Print updated string after removing first occurrence
+Sample Test Case 1
+ Input
+ Hello Hello World
+ Hello
+ Output
+ Hello World
+ Explanation
+ First “Hello” is removed.
+Sample Test Case 2
+ Input
+ JavaCodeJava
+ Java
+ Output
+ CodeJava
+ Explanation
+ Removes the first “Java”.
+Sample Test Case 3
+ Input
+ abcabc
+ abc
+ Output
+ abc
+ Explanation
+ Removes the first occurrence only.
+----------------------------------------------------------------------------------------------------------
+Question–8
+Write a program to insert a string at the end of a StringBuffer.
+ Input Format
+ A base string
+ A string to insert
+ Output Format
+ Print the combined string
+Sample Test Case 1
+ Input
+ Hello
+ World
+ Output
+ HelloWorld
+ Explanation
+ Inserts second string at the end.
+Sample Test Case 2
+ Input
+ Java
+ Code
+ Output
+ JavaCode
+ Explanation
+ Append at end.
+Sample Test Case 3
+ Input
+ Run
+ Fast
+ Output
+ RunFast
+ Explanation
+ Appended normally.
+----------------------------------------------------------------------------------------------------
+Question–8
+Write a program to insert a string at the end of a StringBuffer.
+ Input Format
+ A base string
+ A string to insert
+ Output Format
+ Print the combined string
+Sample Test Case 1
+ Input
+ Hello
+ World
+ Output
+ HelloWorld
+ Explanation
+ Inserts second string at the end.
+Sample Test Case 2
+ Input
+ Java
+ Code
+ Output
+ JavaCode
+ Explanation
+ Append at end.
+Sample Test Case 3
+ Input
+ Run
+ Fast
+ Output
+ RunFast
+ Explanation
+ Appended normally.
+-------------------------------------------------------------------------------------------------
+Write a program to delete the first character from a StringBuilder.
+ Input Format
+ A string
+ Output Format
+ Print updated string
+Sample Test Case 1
+ Input
+ Hello
+ Output
+ ello
+ Explanation
+ First character removed.
+Sample Test Case 2
+ Input
+ Java
+ Output
+ ava
+ Explanation
+ Removed first char.
+Sample Test Case 3
+ Input
+ Programming
+ Output
+ rogramming
+ Explanation
+ 'P' removed.
+----------------------------------------------------------------------------------------------------------
+Question–10
+Write a program to delete all occurrences of a character from a StringBuilder.
+ Input Format
+ A string
+ A character
+ Output Format
+ Print updated string
+Sample Test Case 1
+ Input
+ Breeze
+ e
+ Output
+ Brz
+ Explanation
+ Removed all 'e'.
+Sample Test Case 2
+ Input
+ Mississippi
+ s
+ Output
+ Miiippi
+ Explanation
+ All 's' removed.
+Sample Test Case 3
+ Input
+ CodeJava
+ a
+ Output
+ CodeJv
+ Explanation
+ Deleted every 'a'.
+----------------------------------------------------------------------------------------------------
+Question–11
+Write a program to append a string and reverse it in a StringBuilder.
+ Input Format
+ A string
+ A string
+ Output Format
+ Print reversed result
+Sample Test Case 1
+ Input
+ Sun
+ Light
+ Output
+ thgiLnuS
+ Explanation
+ Combined and reversed.
+Sample Test Case 2
+ Input
+ Hello
+ World
+ Output
+ dlroWolleH
+ Explanation
+ Reverse of concatenation.
+Sample Test Case 3
+ Input
+ Test
+ Run
+ Output
+ nuRtseT
+ Explanation
+ Reversed output.
+-----------------------------------------------------------------------------------------------
+Question–12
+Write a program to replace all occurrences of a character in a StringBuilder.
+ Input Format
+ A string
+ A character
+ A character
+ Output Format
+ Print updated string
+Sample Test Case 1
+ Input
+ Thunder
+ n
+ m
+ Output
+ Thumder
+ Explanation
+ All 'n' replaced by 'm'.
+Sample Test Case 2
+ Input
+ Banana
+ a
+ o
+ Output
+ Bonono
+ Explanation
+ Each 'a' replaced.
+Sample Test Case 3
+ Input
+ Test
+ t
+ x
+ Output
+ Tesx
+ Explanation
+ Replaced 't' with 'x'.
+ -------------------------------------------------------------------------------------------------------
+ Question-13)
+ Question–1
+Write a program to compare two strings lexicographically and return -1, 0, or 1.
+ It compares two strings alphabetically (case-sensitive) and returns:
+ -1 if first comes before second
+ 0 if equal
+ 1 if first comes after second
+Input Format
+ String 1
+ String 2
+Output Format
+ Print -1, 0, or 1
+
+Sample Test Case 1
+Input
+ apple
+ banana
+Output
+ -1
+Explanation
+ "apple" < "banana" so output is -1.
+Sample Test Case 2
+Input
+ cat
+ cat
+Output
+ 0
+Explanation
+ Both strings are equal.
+Sample Test Case 3
+Input
+ zebra
+ apple
+Output
+ 1
+Explanation
+ "zebra" > "apple".
+---------------------------------------------------------------------------------------------------------
+Question-14)
+Write a program to count occurrences of a character in a string between given indices.
+Input Format
+ A string
+ A character
+ Start index
+ End index
+Output Format
+ Print count of occurrences.
+
+Sample Test Case 1
+Input
+ Mississippi
+ s
+ 2
+ 8
+Output
+ 4
+Explanation
+ 's' appears 4 times between index 2 and 7.
+Sample Test Case 2
+Input
+ Programming
+ r
+ 1
+ 7
+Output
+ 2
+Explanation
+ 'r' appears twice.
+Sample Test Case 3
+Input
+ Hello
+ l
+ 1
+ 4
+Output
+ 2
+Explanation
+ 'l' occurs 2 times.
+---------------------------------------------------------------------------------------------------------
+Question-15)
+Write a program to compress a string using character counts.
+ (Example: aabcc → a2b1c2)
+ Return the original string if compressed version is longer;
+ If equal length, return compressed.
+Input Format
+ A lowercase string
+Output Format
+ Print compressed string.
+
+Sample Test Case 1
+Input
+ aabcccccaaa
+Output
+ a2b1c5a3
+Explanation
+ Repeated counts appended.
+Sample Test Case 2
+Input
+ abc
+Output
+ abc
+Explanation
+ Compressed = a1b1c1 (length 6 > 3), so original returned.
+Sample Test Case 3
+Input
+ aaa
+Output
+ a3
+Explanation
+ Compressed shorter, so returned.
+---------------------------------------------------------------------------------------------------
+Question-16)
+Write a program to remove duplicate characters, keeping only first occurrences.
+Input Format
+ A string
+Output Format
+ Print string without duplicates
+Sample Test Case 1
+Input
+ hello
+Output
+ helo
+Explanation
+ Keep first 'l'.
+Sample Test Case 2
+Input
+ aabbcc
+Output
+ abc
+Explanation
+ Remove repeated letters.
+Sample Test Case 3
+Input
+ adding
+Output
+ ading
+Explanation
+ 'D' removed only once.
+--------------------------------------------------------------------------------------------------------
+Question-17)
+Write a program to find the longest word in a string.
+ Words are separated by spaces.
+ If multiple words have the same length, return the first one.
+Input Format
+ A string containing words separated by spaces
+Output Format
+ Print the longest word.
+
+Sample Test Case 1
+Input
+ I love coding
+Output
+ coding
+Explanation
+ "coding" is longest.
+Sample Test Case 2
+Input
+ a b c
+Output
+ a
+Explanation
+ All same length → return first.
+Sample Test Case 3
+Input
+ hello world
+Output
+ hello
+Explanation
+ Both 5 letters → first returned.
+-----------------------------------------------------------------------------------------------------
+Question-18)
+Write a program to count the number of vowels (a, e, i, o, u) in a string.
+ String contains only lowercase English letters.
+Input Format
+ A lowercase string
+Output Format
+ Print vowel count.
+
+Sample Test Case 1
+Input
+ apple
+Output
+ 2
+Explanation
+ 'a' and 'e'.
+Sample Test Case 2
+Input
+ aeiou
+Output
+ 5
+Explanation
+ All vowels.
+Sample Test Case 3
+Input
+ hello
+Output
+ 2
+Explanation
+ 'e' and 'o'.
+-----------------------------------------------------------------------------------------------------
+Question-19) Check if Two Strings are Anagrams
+—------------------------------------------------
+Question:
+
+Write a Java program to check whether two given strings are anagrams of each other.
+An anagram is a word or phrase formed by rearranging the letters of another word or phrase, using all characters exactly once.
+
+The program should:
+
+Ignore spaces
+
+Ignore uppercase/lowercase
+
+Only use String methods (no arrays, no collections)
+
+Print “Anagrams” if both strings match, otherwise print “Not Anagrams”
+
+ Input Format
+
+First line: First string
+
+Second line: Second string
+
+ Output Format
+
+Print:
+
+Anagrams
+
+or
+Not Anagrams
+
+ Sample Testcase 1
+Input
+elbow
+below
+
+Output
+Anagrams
+
+Explanation
+
+Both contain the same letters rearranged.
+
+ Sample Testcase 2
+Input
+heart
+earth
+
+Output
+Anagrams
+
+Explanation
+
+Both words use the same characters exactly once.
+
+ Sample Testcase 3
+Input
+funeral
+real fun
+
+Output
+Anagrams
+
+Explanation
+
+Ignoring spaces →
+funeral → funeral
+real fun → realfun
+Both contain the same characters.
+---------------------------------------------------------------------------------------------------
+Question-20)
+Question:
+
+Write a Java program to count the number of occurrences of each character in a given string.
+The program should print the character along with the number of times it appears in the string.
+Ignore repeated characters after counting them once.
+Do not use arrays, maps, or collections — use only String methods.
+
+ Input Format
+A single line containing the input string.
+
+ Output Format
+
+Print each unique character and its count, one per line.
+
+Format:
+
+character: count
+
+ Sample Testcase 1
+Input
+hello world
+
+Output
+h: 1
+e: 1
+l: 3
+o: 2
+ : 1
+w: 1
+r: 1
+d: 1
+
+Explanation
+
+'l' appears 3 times
+
+space ' ' appears once
+
+rest appear once each
+
+ Sample Testcase 2
+Input
+banana
+
+Output
+b: 1
+a: 3
+n: 2
+
+Explanation
+
+'a' → 3
+
+'n' → 2
+
+'b' → 1
+
+ Sample Testcase 3
+Input
+aabbccdd
+
+Output
+a: 2
+b: 2
+c: 2
+d: 2
+
+Explanation
+
+All characters repeat twice.
+=============================================================================================================
