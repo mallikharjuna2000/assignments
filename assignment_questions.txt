@@ -7949,3 +7949,382 @@ Explanation
 
 All characters repeat twice.
 =============================================================================================================
+
+Explanation
+
+All characters repeat twice.
+=============================================================================================================
+=============================================================================================================
+Day-32 Interfaces
+================
+Problem Statement
+1. In a vehicle system, define an interface Vehicle with a method move() that returns a string describing movement. Implement it in a Car class. Read a dummy input and output the movement description.
+This introduces basic interface usage.
+
+Input Format
+A single line string (ignored).
+Output Format
+Car is moving
+
+ Sample Test Case 1
+Input
+ Start
+ Output
+ Car is moving
+ Sample Test Case 2
+Input
+ Go
+ Output
+ Car is moving
+ Sample Test Case 3
+Input
+ EngineOn
+ Output
+ Car is moving
+--------------------------------------------------------------------------------------------------
+Question 2
+Problem Statement
+In a shape system, define an interface Shape with a method getName() returning "Circle".
+ Implement it in a Circle class. Read dummy input and print "Circle".
+Input Format
+Single line: any string (ignored).
+Output Format
+Circle
+
+Sample Test Case 1
+Input
+Shape
+
+Output
+Circle
+
+Sample Test Case 2
+Input
+Hi
+
+Output
+Circle
+
+Sample Test Case 3
+Input
+123
+
+Output
+Circle
+-------------------------------------------------------------------------------------
+
+ Question 3
+Problem Statement
+Define an interface Calculator with method add(int a, int b) to return the sum.
+ Implement it in BasicCalculator, read two integers, and print the sum.
+Input Format
+Single line: two integers (space-separated)
+Output Format
+Sum of the numbers.
+
+Sample Test Case 1
+Input
+5 10
+
+Output
+15
+
+Sample Test Case 2
+Input
+-2 7
+
+Output
+5
+
+Sample Test Case 3
+Input
+100 50
+
+Output
+150
+------------------------------------------------------------------------------------------
+Problem Statement
+Define an interface MathOperation with method operate(int x).
+ Implement it in Square class to return the square of a number.
+Input Format
+Single line: number (int)
+Output Format
+Square of the number.
+
+Sample Test Case 1
+Input
+5
+
+Output
+25
+
+Sample Test Case 2
+Input
+10
+
+Output
+100
+
+Sample Test Case 3
+Input
+3
+
+Output
+9
+-----------------------------------------------------------------------------------------------
+Question 5 
+Problem Statement
+In a validator system, define an interface Validator with a method isValid(int n) to check validity.
+ Implement it in a PositiveNumberValidator class to check whether a number is positive.
+Read a number and print:
+"Valid" if number > 0
+
+
+"Invalid" otherwise
+
+
+Input Format
+Single line: number (int)
+Output Format
+Valid
+ or
+ Invalid
+
+Sample Test Case 1
+Input
+5
+
+Output
+Valid
+
+Sample Test Case 2
+Input
+0
+
+Output
+Invalid
+
+Sample Test Case 3
+Input
+-10
+
+Output
+Invalid
+-------------------------------------------------------------------------------------------------------------
+In a shape calculator, define an interface Shape with methods area and perimeter.
+ Implement it in a Rectangle class.
+ Read length and width, output the area and perimeter.
+
+
+The Rectangle class implements them using length and width.
+
+Input Format
+Single line: length width (double values, space-separated)
+Output Format
+Area: [area]
+Perimeter: [perimeter]
+
+(Both rounded to two decimals)
+
+Sample Test Case 1
+Input
+5 3
+
+Output
+Area: 15.00
+Perimeter: 16.00
+
+Sample Test Case 2
+Input
+10 2.5
+
+Output
+Area: 25.00
+Perimeter: 25.00
+
+Sample Test Case 3
+Input
+7.5 4
+
+Output
+Area: 30.00
+Perimeter: 23.00
+-----------------------------------------------------------------------------------------------------
+ Question 7 
+Problem List
+In a notification system, define an interface Notifier with a method send.
+ Implement it in EmailNotifier and SMSNotifier classes.
+
+
+EmailNotifier returns
+Email: [message]
+
+SMSNotifier returns
+SMS: [message]
+
+Select class based on input type.
+
+Input Format
+Line 1: message (String)
+ Line 2: type ("email" or "sms")
+Output Format
+Email: [message]
+ or
+ SMS: [message]
+
+Sample Test Case 1
+Input
+Meeting at 5
+email
+
+Output
+Email: Meeting at 5
+
+Sample Test Case 2
+Input
+Hello there
+sms
+
+Output
+SMS: Hello there
+
+Sample Test Case 3
+Input
+Reminder
+email
+
+Output
+Email: Reminder
+
+--------------------------------------------------------------------------------
+Question-8
+Problem List
+In a payment system, define an interface Payment with a method pay.
+ Implement it in CreditCard class to check if amount ≤ balance.
+
+
+
+Input Format
+Single line: amount balance (doubles, space-separated)
+Output Format
+Payment Successful
+ or
+ Insufficient Balance
+
+Sample Test Case 1
+Input
+100 500
+
+Output
+Payment Successful
+
+Sample Test Case 2
+Input
+700 300
+
+Output
+Insufficient Balance
+
+Sample Test Case 3
+Input
+50 50
+
+Output
+Payment Successful
+-------------------------------------------------------------------------------------------------
+Question 9 
+Problem List
+In a logger system, define an interface Logger with methods log and clear.
+ Implement it in FileLogger class to store messages in a list.
+
+
+
+Input Format
+Line 1: n
+ Next n lines: messages
+ Last line: "yes" or "no" → clear flag
+Output Format
+Logged: [messages]
+ or
+ Cleared
+
+Sample Test Case 1
+Input
+2
+Error
+Warning
+yes
+
+Output
+Cleared
+
+Sample Test Case 2
+Input
+3
+Hi
+Hello
+Test
+no
+
+Output
+Logged: [Hi, Hello, Test]
+
+Sample Test Case 3
+Input
+1
+Log1
+no
+
+Output
+Logged: [Log1]
+----------------------------------------------------------------------------------------------
+Question-10. In a drawing system, define an interface Drawable with methods draw and erase. Implement it in a Sketch class that stores shapes. Read commands (draw/erase) and shape names, output actions. Define a Drawable interface with draw and erase methods. The Sketch class implements them to manage a list of shapes and return action messages.
+Input Format
+First line: n (int) — number of commands
+Next n lines: <command> <shape>
+
+Where:
+command is either "draw" or "erase"
+shape is a string (no spaces)
+Output Format
+Print one action message per line:
+"Drawing <shape>"
+"Erasing <shape>"
+
+
+Sample Testcases
+
+Sample Input 1
+2
+draw Circle
+erase Square
+
+Sample Output 1
+Drawing Circle
+Erasing Square
+
+Sample Input 2
+4
+draw Triangle
+draw Hexagon
+erase Triangle
+erase Circle
+
+Sample Output 2
+Drawing Triangle
+Drawing Hexagon
+Erasing Triangle
+Erasing Circle
+
+Sample Input 3
+3
+draw Flower
+erase Flower
+erase Flower
+
+Sample Output 3
+Drawing Flower
+Erasing Flower
+Erasing Flower
+
+----------------------------------------------------------------------------------------------------
