@@ -8328,3 +8328,202 @@ Erasing Flower
 Erasing Flower
 
 ----------------------------------------------------------------------------------------------------
+Erasing Flower
+
+----------------------------------------------------------------------------------------------------
+Day-32 Interfaces and AdapterPattern
+======================================
+Question-1)
+In a payment processor, define an interface PaymentProcessor with methods process and refund. Implement it in a PayPal class. Read n transactions (process or refund) and amounts, output the final balance.
+Input Format:
+ First line: n
+ Next n lines: command (process or refund), amount (double)
+Output Format:
+ "Balance: [balance]" rounded to two decimals
+Example:
+Input:
+2
+process 100
+refund 50
+
+Output:
+Balance: 50.00
+
+Sample Testcases
+Testcase 1
+Input
+2
+process 100
+refund 50
+
+Output
+Balance: 50.00
+
+Testcase 2
+Input
+3
+process 200
+process 150.5
+refund 50.5
+
+Output
+Balance: 300.00
+
+
+Testcase 3
+Input
+1
+refund 30
+
+Output
+Balance: -30.00
+
+
+Testcase 4
+Input
+4
+process 500
+refund 100
+refund 50
+process 25.75
+
+Output
+Balance: 375.75
+
+----------------------------------------------------------------------------------------------------------
+ Question-2)
+ In a shape system, define an interface DrawableShape with methods draw and getArea. Implement it in a Circle class using radius. Read radius and a command (draw/area), output the result.
+Input Format:
+ First line: radius (double)
+ Second line: command (draw or area)
+Output Format:
+ "Drawing Circle"
+ or
+ "Area: [area]" (rounded to two decimals)
+Example:
+Input:
+5
+area
+
+Output:
+Area: 78.54
+
+Sample Testcases
+Testcase 1
+Input
+5
+area
+
+Output
+Area: 78.54
+
+Testcase 2
+Input
+10
+draw
+
+Output
+Drawing Circle
+
+Testcase 3
+Input
+2.5
+area
+
+Output
+Area: 19.63
+
+Testcase 4
+Input
+7
+draw
+
+Output
+Drawing Circle
+------------------------------------------------------------------------------------------------------
+Question-3)
+
+Your program will receive several player commands that control the Warrior.
+ Each command will be either "attack" or "defend".
+For each command, the Warrior must perform the corresponding action, and your program must display the appropriate message.
+You must read how many commands the player will give, then process and output each action.
+ Input Format
+First line: an integer n representing how many commands the player will issue
+
+
+Next n lines: each line contains a command
+"attack"
+"defend"
+
+
+ Output Format
+For each command, print the correct action message:
+"Warrior attacks"
+"Warrior defends"
+
+
+ Sample Testcases
+Testcase 1
+Input:
+2
+attack
+defend
+
+
+Output:
+Warrior attacks
+Warrior defends
+
+
+Testcase 2
+Input:
+3
+defend
+attack
+attack
+
+
+Output:
+Warrior defends
+Warrior attacks
+Warrior attacks
+
+
+Testcase 3
+Input:
+1
+attack
+Output:
+Warrior attacks
+
+----------------------------------------------------------------------------------------------------------
+In an adapter pattern, define an interface ModernPrinter with a method printModern. Create a LegacyPrinter class with a printLegacy method. Create an adapter PrinterAdapter implementing ModernPrinter to adapt LegacyPrinter. Read a message and output the modern print result. Define a ModernPrinter interface with printModern. The LegacyPrinter class has printLegacy. The PrinterAdapter implements ModernPrinter and uses LegacyPrinter internally.
+Input Format:
+ Single line: message (String).
+Output Format:
+
+
+Testcase 1
+Input
+Hello
+Output
+Legacy Print: Hello
+
+Testcase 2
+Input
+Good Morning
+Output
+Legacy Print: Good Morning
+
+Testcase 3
+Input
+Codegnan Training
+Output
+Legacy Print: Codegnan Training
+
+Testcase 4
+Input
+Java Adapter Pattern
+Output
+Legacy Print: Java Adapter Pattern
+---------------------------------------------------------------------------------------------------------
