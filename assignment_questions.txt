@@ -8527,3 +8527,803 @@ Java Adapter Pattern
 Output
 Legacy Print: Java Adapter Pattern
 ---------------------------------------------------------------------------------------------------------
+Output
+Legacy Print: Java Adapter Pattern
+---------------------------------------------------------------------------------------------------------
+Day-34 Multiple interface implementation
+----------------------------------------
+Question-1)
+
+In a vehicle system, define interfaces Movable with a move method and Stoppable with a stop method. 
+Implement both in a Car class. Read a command (move/stop) and output the corresponding action. 
+Define Movable with a move method returning "Moving" and Stoppable with a stop method returning "Stopped". 
+The Car class implements both to handle the commands.
+
+
+Input Format
+Single line: command ("move" or "stop").
+
+Output Format
+"Moving" or "Stopped".
+
+Sample Testcases
+ Sample 1
+Input
+move
+
+Output
+Moving
+
+Sample 2
+Input
+stop
+
+Output
+Stopped
+
+Sample 3
+Input
+move
+
+Output
+Moving
+
+---------------------------------------------------------------------------------------------------------
+Question-2)
+In a printer system, define interfaces Printable with a print method and Scannable with a scan method. 
+Implement both in a MultiFunctionPrinter class. Read a command (print/scan) and a message, output the action. 
+Define Printable with print returning "Printed: [message]" and Scannable with scan returning "Scanned: [message]".
+ The MultiFunctionPrinter class implements both.
+
+
+Input Format:
+ First line: command ("print" or "scan").
+ Second line: message (String).
+Output Format:
+ "Printed: [message]" or "Scanned: [message]".
+Example:
+Input:
+print
+Hello
+
+Output:
+Printed: Hello
+
+Constraints:
+Message up to 100 characters.
+
+
+Command is "print" or "scan".
+
+
+Sample Testcases
+ Sample 1
+Input
+print
+Hello
+
+Output
+Printed: Hello
+
+Sample 2
+Input
+scan
+Document123
+
+Output
+Scanned: Document123
+
+Sample 3
+Input
+print
+Welcome to CodeArena
+
+Output
+Printed: Welcome to CodeArena
+-------------------------------------------------------------------------------------------------------
+Question-3)
+In a text system, define interfaces Editable with an edit method and Viewable with a view method. 
+Implement both in a Document class. Read a command (edit/view) and a text, output the action. 
+Define Editable with edit returning "Edited: [text]" and Viewable with view returning "Viewed: [text]". 
+The Document class implements both.
+
+
+Input Format:
+ First line: command ("edit" or "view").
+ Second line: text (String).
+Output Format:
+ "Edited: [text]" or "Viewed: [text]".
+Example:
+Input:
+edit
+Report
+
+Output:
+Edited: Report
+
+Constraints:
+Text up to 100 characters.
+
+
+Command is "edit" or "view".
+
+
+Sample Testcases
+Sample 1
+Input
+edit
+Report
+
+Output
+Edited: Report
+
+Sample 2
+Input
+view
+Notes
+
+Output
+Viewed: Notes
+
+Sample 3
+Input
+edit
+Daily Tasks
+
+Output
+Edited: Daily Tasks
+--------------------------------------------------------------------------------------------------------
+Question-4)
+A notification center can send a notification or clear all notifications. Define Notifiable with send(String msg)
+ returning "Sent: [msg]" and Clearable with clear() returning "Cleared". The NotificationCenter implements both.
+  Input consists of a command on line one (send or clear). If command is send, line two contains the message 
+  string (<=100 chars). Print either the sent message format or Cleared. This simulates a minimal push-notification
+   action.
+
+
+Input Format:
+ Line1: "send" or "clear"
+ If send, Line2: message (String)
+Output Format:
+ Sent: [message] or Cleared
+Example:
+Input:
+send
+Hello User
+
+Output:
+Sent: Hello User
+
+Constraints:
+Message length ≤ 100 characters.
+
+
+Sample Testcases
+ Sample 1
+Input
+send
+Hello User
+
+Output
+Sent: Hello User
+
+Sample 2
+Input
+clear
+
+Output
+Cleared
+
+Sample 3
+Input
+send
+Welcome Back
+
+Output
+Sent: Welcome Back
+
+--------------------------------------------------------------------------------------------------------
+Question-5)
+A theater light controller supports dimming down and brightening up. Define Dimable with dim() returning "Dimmed"
+ and Brightenable with brighten() returning "Brightened". The LightController implements both. 
+ Input is a single command (dim or brighten). Output the state string. This simulates a quick stage adjustment.
+
+
+
+Input Format:
+ Single line: "dim" or "brighten".
+Output Format:
+ Dimmed or Brightened
+Example:
+Input:
+brighten
+
+Output:
+Brightened
+
+Constraints:
+Command valid.
+
+
+Sample Testcases
+Sample 1
+Input
+dim
+
+Output
+Dimmed
+
+Sample 2
+Input
+brighten
+
+Output
+Brightened
+
+Sample 3
+Input
+dim
+
+Output
+Dimmed
+--------------------------------------------------------------------------------------------------------
+Question-6)
+You are building a Library System. Books can be borrowed or returned.
+ Define an interface Borrowable with method borrow(String title) returning
+ "Borrowed: [title]".
+ Define another interface Returnable with method returnBook(String title)
+ returning "Returned: [title]".
+ A LibraryBook implements both.
+ Input is a command (borrow or return) followed by a line containing the book
+ title.
+ Output the appropriate action.
+
+
+Input Format:
+ Line 1: "borrow" or "return"
+ Line 2: Book title (String)
+Output Format:
+ Borrowed: [title] or Returned: [title]
+Example:
+Input:
+borrow
+Java Programming
+
+Output:
+Borrowed: Java Programming
+
+Constraints:
+Title length ≤ 50
+
+
+Sample Testcases
+ Sample 1
+Input
+borrow
+Java Programming
+
+Output
+Borrowed: Java Programming
+
+Sample 2
+Input
+return
+Data Structures
+
+Output
+Returned: Data Structures
+
+Sample 3
+Input
+borrow
+Algorithms Book
+
+Output
+Borrowed: Algorithms Book
+--------------------------------------------------------------------------------------------------------
+Question-7)
+A payment gateway supports processing and refunding transactions.
+ Define Processable with method process(double amt) returning "Processed: [amt]".
+ Define Refundable with method refund(double amt) returning "Refunded: [amt]".
+ A Gateway implements both.
+ Input has a command (process or refund) followed by an amount.
+ Output the result with the value printed as a double.
+
+
+Input Format:
+ Line 1: "process" or "refund"
+ Line 2: amount (double)
+Output Format:
+ Processed: [amt] or Refunded: [amt]
+Example:
+Input:
+process
+250.5
+
+Output:
+Processed: 250.5
+
+Constraints:
+0 ≤ amt ≤ 10^6
+
+
+Sample Testcases
+Sample 1
+Input
+process
+100.0
+
+Output
+Processed: 100.0
+
+Sample 2
+Input
+refund
+50.75
+
+Output
+Refunded: 50.75
+
+Sample 3
+Input
+process
+999999.99
+
+Output
+Processed: 999999.99
+---------------------------------------------------------------------------------------------------------------
+Question-8)
+An exam portal allows students to either submit an answer or review their answer.
+ Define Submittable with submit(String ans) returning "Submitted: [ans]".
+ Define Reviewable with review(String ans) returning "Reviewing: [ans]".
+ The ExamPortal implements both.
+ The system reads a command (submit or review) followed by the answer string.
+
+
+Input Format:
+ Line 1: "submit" or "review"
+ Line 2: answer (String)
+Output Format:
+ Submitted: [ans] or Reviewing: [ans]
+Example:
+Input:
+submit
+Option A
+
+Output:
+Submitted: Option A
+
+Constraints:
+Answer length ≤ 200
+
+
+Sample Testcases
+Sample 1
+Input
+submit
+Option A
+
+Output
+Submitted: Option A
+
+Sample 2
+Input
+review
+My chosen answer
+
+Output
+Reviewing: My chosen answer
+
+Sample 3
+Input
+submit
+True
+
+Output
+Submitted: True
+
+---------------------------------------------------------------------------------------------------
+Question-9)
+A smart TV can either switch channels or adjust volume.
+ Define ChannelSwitchable with switchChannel(int num) returning "Channel: [num]".
+ Define VolumeAdjustable with adjustVolume(int lvl) returning "Volume: [lvl]".
+ The SmartTV implements both.
+ Input has a command (channel or volume) followed by an integer.
+
+
+Input Format:
+ Line 1: "channel" or "volume"
+ Line 2: integer
+Output Format:
+ Channel: [num] or Volume: [lvl]
+Example:
+Input:
+channel
+45
+
+Output:
+Channel: 45
+
+Constraints:
+1 ≤ num ≤ 999
+
+
+0 ≤ lvl ≤ 100
+
+
+Sample Testcases
+ Sample 1
+Input
+channel
+10
+
+Output
+Channel: 10
+
+sample 2
+Input
+volume
+75
+
+Output
+Volume: 75
+
+Sample 3
+Input
+channel
+999
+
+Output
+Channel: 999
+--------------------------------------------------------------------------------------------------
+Question-10)
+m] or Removed: [item]
+Example:
+Input:
+add
+Laptop
+
+Output:
+Added: Laptop
+
+Constraints:
+Item length ≤ 50
+
+
+Sample Testcases
+ Sample 1
+Input
+add
+Shoes
+
+Output
+Added: Shoes
+
+Sample 2
+Input
+remove
+Notebook
+
+Output
+Removed: Notebook
+
+Sample 3
+Input
+add
+Mobile
+
+Output
+Added: Mobile
+------------------------------------------------------------------------------------------------
+Question-11)
+You are building a Smart Home Controller. A device can either turn on/off lights or adjust the AC temperature.
+ Define two interfaces:
+ LightControl → turnOn() returns "Lights On", turnOff() returns "Lights Off".
+ TemperatureControl → setTemp(int t) returns "Temperature set to [t]".
+ SmartHome implements both.
+
+
+Input Format:
+ Line 1: command (on, off, temp)
+ If temp, Line 2: integer temperature
+Output Format:
+ "Lights On" or "Lights Off" or "Temperature set to X"
+Example:
+Input:
+temp
+22
+
+Output:
+Temperature set to 22
+
+Constraints:
+16 ≤ temperature ≤ 30
+
+
+Sample Testcases
+ Sample 1
+Input
+on
+
+Output
+Lights On
+
+Sample 2
+Input
+off
+
+Output
+Lights Off
+
+Sample 3
+Input
+temp
+25
+
+Output
+Temperature set to 25
+------------------------------------------------------------------------------------------------------
+Question-12)
+A university’s online portal allows students to register or drop courses.
+ You need to design two interfaces:
+ Registrable with method register(String course) returning "Registered: [course]".
+ Droppable with method drop(String course) returning "Dropped: [course]".
+ The UniversityPortal class implements both.
+ Read multiple commands like "register Java" or "drop DBMS". Print results accordingly.
+
+
+Input Format:
+ First line: integer n = number of operations
+ Next n lines: "register [course]" or "drop [course]"
+Output Format:
+ For each operation, print result
+Example:
+Input:
+2
+register Java
+drop DBMS
+
+Output:
+Registered: Java
+Dropped: DBMS
+
+Constraints:
+1 ≤ n ≤ 10
+
+
+Course name ≤ 50 chars
+
+
+Sample Testcases
+ Sample 1
+Input
+3
+register Python
+drop Math
+register DBMS
+
+Output
+Registered: Python
+Dropped: Math
+Registered: DBMS
+
+Sample 2
+Input
+1
+drop OS
+
+Output
+Dropped: OS
+
+Sample 3
+Input
+2
+register Networks
+drop Networks
+
+Output
+Registered: Networks
+Dropped: Networks
+-------------------------------------------------------------------------------------------------------------
+Question-13)
+A library system allows students to issue and return books.
+ You need to design:
+ Issuable with method issue(String title) returning "Issued: [title]".
+ Returnable with method returnBook(String title) returning "Returned: [title]".
+ The Library class implements both.
+ Read multiple commands (issue or return) with a book title and print the result.
+
+
+Input Format:
+ First line: integer n (number of operations)
+ Next n lines: issue title or return title
+Output Format:
+ For each operation, print the action result
+Example:
+Input:
+2
+issue HarryPotter
+return HarryPotter
+
+Output:
+Issued: HarryPotter
+Returned: HarryPotter
+
+Constraints:
+1 ≤ n ≤ 10
+
+
+Book title length ≤ 50 characters
+
+
+Sample Testcases
+ Sample 1
+Input
+3
+issue Java
+issue DBMS
+return Java
+
+Output
+Issued: Java
+Issued: DBMS
+Returned: Java
+
+Sample 2
+Input
+1
+return Python
+
+Output
+Returned: Python
+
+ Sample 3
+Input
+2
+issue CProgramming
+return CProgramming
+
+Output
+Issued: CProgramming
+Returned: CProgramming
+
+------------------------------------------------------------------------------------------------------------
+Question-14)
+
+A vehicle tracking system manages engine control and speed control.
+ You need to design:
+ EngineControl with methods start() and stop() returning "Engine Started" / "Engine Stopped".
+ SpeedControl with method setSpeed(int) returning "Speed: X".
+ The Vehicle class implements both.
+ Read commands: "start", "stop", or "speed X".
+
+
+Input Format:
+ First line: integer n
+ Next n lines: commands
+Output Format:
+ Print the result for each command
+Example:
+Input:
+3
+start
+speed 60
+stop
+
+Output:
+Engine Started
+Speed: 60
+Engine Stopped
+
+Constraints:
+1 ≤ n ≤ 10
+
+
+Speed between 0–200
+
+
+Sample Testcases
+ Sample 1
+Input
+2
+start
+stop
+
+Output
+Engine Started
+Engine Stopped
+
+Sample 2
+Input
+3
+start
+speed 120
+speed 80
+
+Output
+Engine Started
+Speed: 120
+Speed: 80
+
+Sample 3
+Input
+3
+speed 0
+start
+speed 200
+
+Output
+Speed: 0
+Engine Started
+Speed: 200
+----------------------------------------------------------------------------------------------------
+Question-15)
+In a smart home, devices can be switched on/off and adjusted.
+ You need to design:
+ Switchable with methods on() and off() returning "Device On" and "Device Off".
+ Adjustable with method adjust(int level) returning "Adjusted to [level]".
+ The SmartDevice class implements both.
+ Read commands like "on", "off", or "adjust X".
+
+
+Input Format:
+ First line: integer n
+ Next n lines: commands
+Output Format:
+ Print results for each command
+Example:
+Input:
+3
+on
+adjust 75
+off
+
+Output:
+Device On
+Adjusted to 75
+Device Off
+
+Constraints:
+1 ≤ n ≤ 10
+
+
+0 ≤ level ≤ 100
+
+
+Sample Testcases
+Sample 1
+Input
+2
+on
+off
+
+Output
+Device On
+Device Off
+
+Sample 2
+Input
+3
+adjust 10
+on
+adjust 90
+``**
+**Output**
+
+Adjusted to 10
+ Device On
+ Adjusted to 90
+
+*Sample 3**
+**Input**
+
+3
+ on
+ adjust 50
+ adjust 100
+**Output**
+
+Device On
+ Adjusted to 50
+ Adjusted to 100
+===========================================================================================================
