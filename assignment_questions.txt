@@ -9327,3 +9327,518 @@ Device On
  Adjusted to 50
  Adjusted to 100
 ===========================================================================================================
+Adjusted to 50
+Adjusted to 100
+===========================================================================================================
+Day-32 Try and Catch
+----------------------
+QUESTION 1
+Write a method parseNumber(String str) that uses a try block to parse a string into an integer. Return the integer if valid, or throw a NumberFormatException if invalid.
+Input Format
+ First line: A string representing a number (may contain digits or invalid characters)
+Output Format
+ Print the parsed integer, or print "NumberFormatException" if invalid.
+Sample Test Case 1
+ Input
+ 123
+ Output
+ 123
+ Explanation
+ Valid integer string → parsed successfully.
+Sample Test Case 2
+ Input
+ abc
+ Output
+ NumberFormatException
+ Explanation
+ Invalid number format → exception thrown and caught in main.
+Sample Test Case 3
+ Input
+ 12.34
+ Output
+ NumberFormatException
+ Explanation
+ Contains non-digit characters → invalid integer → exception.
+-----------------------------------------------------------------------------------
+QUESTION 2
+Write a method divide(int a, int b) that uses a try block to perform a division. Return the result if valid, or throw an ArithmeticException for division by zero.
+Input Format
+ Two integers a and b
+Output Format
+ Print the result of a/b, or print "ArithmeticException" if division by zero occurs.
+Sample Test Case 1
+ Input
+ 10 2
+ Output
+ 5
+ Explanation
+ 10 / 2 = 5 → valid division.
+Sample Test Case 2
+ Input
+ 10 0
+ Output
+ ArithmeticException
+ Explanation
+ Division by zero → exception thrown and caught.
+Sample Test Case 3
+ Input
+ -10 2
+ Output
+ -5
+ Explanation
+ Negative numerator allowed → valid result.
+-----------------------------------------------------------------------------------------------
+QUESTION 3
+Write a method getLength(String str) that uses a try block to return the length of a string. Throw a NullPointerException if the string is null.
+Input Format
+ A string value (may be "null" literal)
+Output Format
+ Print string length or print "NullPointerException" if null.
+Sample Test Case 1
+ Input
+ hello
+ Output
+ 5
+ Explanation
+ "hello" length is 5.
+Sample Test Case 2
+ Input
+ null
+ Output
+ NullPointerException
+ Explanation
+ Literal "null" means actual null → exception thrown.
+Sample Test Case 3
+ Input
+ abc
+ Output
+ 3
+ Explanation
+ Valid string → length is 3.
+-------------------------------------------------------------------------------------------------------
+QUESTION 4
+Write a method safeParse(String str) that uses a catch block to handle a NumberFormatException. Return the parsed integer if valid, or 0 if invalid.
+Input Format
+ A string representing a number
+Output Format
+ Print parsed integer, or 0 if invalid.
+Sample Test Case 1
+ Input
+ abc
+ Output
+ 0
+ Explanation
+ Invalid format → method returns 0.
+Sample Test Case 2
+ Input
+ 789
+ Output
+ 789
+ Explanation
+ Valid integer → parsed normally.
+Sample Test Case 3
+ Input
+ 12.34
+ Output
+ 0
+ Explanation
+ Contains dot → invalid for integer.
+---------------------------------------------------------------------------------------------------
+QUESTION 5
+Write a method safeDivide(int a, int b) that uses a catch block to handle ArithmeticException. Return the result if valid, or 0 if division by zero occurs.
+Input Format
+ Two integers a and b
+Output Format
+ Print result of division or 0 if error.
+Sample Test Case 1
+ Input
+ 10 0
+ Output
+ 0
+ Explanation
+ Division by zero → method returns 0.
+Sample Test Case 2
+ Input
+ 15 3
+ Output
+ 5
+ Explanation
+ 15 / 3 = 5.
+Sample Test Case 3
+ Input
+ -10 2
+ Output
+ -5
+ Explanation
+ Valid negative result.
+----------------------------------------------------------------------------------------------------
+QUESTION 6
+Write a method safeLength(String str) that uses a catch block to handle a NullPointerException. Return the string length if valid, or -1 if null.
+Input Format
+ A string (literal "null" means actual null)
+Output Format
+ Print string length or -1.
+Sample Test Case 1
+ Input
+ hello
+ Output
+ 5
+ Explanation
+ Valid string → length = 5.
+Sample Test Case 2
+ Input
+ null
+ Output
+ -1
+ Explanation
+ Literal "null" → treated as null → method returns -1.
+Sample Test Case 3
+ Input
+ Java Programming
+ Output
+ 16
+ Explanation
+ Includes space → total length 16.
+------------------------------------------------------------------------------------------------------
+QUESTION 7
+Write a method checkPositive(int num) that throws a custom IllegalArgumentException if the input is negative. Return "Valid" if positive or zero.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Valid" or "IllegalArgumentException"
+Sample Test Case 1
+ Input
+ 5
+ Output
+ Valid
+ Explanation
+ 5 is positive → valid.
+Sample Test Case 2
+ Input
+ 0
+ Output
+ Valid
+ Explanation
+ 0 is allowed.
+Sample Test Case 3
+ Input
+ -5
+ Output
+ IllegalArgumentException
+ Explanation
+ Negative number → exception thrown.
+---------------------------------------------------------------------------------------------------------
+QUESTION 8
+Write a method checkNonEmpty(String str) that throws an IllegalArgumentException if the string is null or empty. Return "Non-empty" if valid.
+Input Format
+ A string (literal “null” means actual null)
+Output Format
+ Print "Non-empty" or "IllegalArgumentException"
+Sample Test Case 1
+ Input
+ hello
+ Output
+ Non-empty
+ Explanation
+ String has characters.
+Sample Test Case 2
+ Input
+ null
+ Output
+ IllegalArgumentException
+ Explanation
+ Null string → invalid.
+Sample Test Case 3
+ Input
+ java
+ Output
+ Non-empty
+ Explanation
+ Valid non-empty string.
+ -------------------------------------------------------------------------------------------------
+ QUESTION 9
+Write a method setAge(int age) that throws an IllegalArgumentException if the age is negative or greater than 150. Return "Age set" if valid.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Age set" or "IllegalArgumentException"
+Sample Test Case 1
+ Input
+ 25
+ Output
+ Age set
+ Explanation
+ 25 is valid.
+Sample Test Case 2
+ Input
+ 0
+ Output
+ Age set
+ Explanation
+ 0 is allowed.
+Sample Test Case 3
+ Input
+ 200
+ Output
+ IllegalArgumentException
+ Explanation
+ 200 exceeds valid age.
+----------------------------------------------------------------------------------------------------------
+QUESTION 10
+Write a method setScore(int score) that throws an IllegalArgumentException if the score is not between 0 and 100. Return "Score set" if valid.
+Input Format
+ One integer (-1000 to 1000)
+Output Format
+ Print "Score set" or "IllegalArgumentException"
+Sample Test Case 1
+ Input
+ 85
+ Output
+ Score set
+ Explanation
+ 85 is valid.
+Sample Test Case 2
+ Input
+ 0
+ Output
+ Score set
+ Explanation
+ 0 is allowed.
+Sample Test Case 3
+ Input
+ 101
+ Output
+ IllegalArgumentException
+ Explanation
+ Score > 100 → invalid.
+----------------------------------------------------------------------------------------------
+QUESTION 11
+Write a method divideNumbers(int a, int b) that uses a finally block to log "Division attempted". Return the result or throw an ArithmeticException.
+Input Format
+ Two integers a and b
+Output Format
+ Print result, then "Log: Division attempted".
+ If exception occurs, print "ArithmeticException" then log message.
+Sample Test Case 1
+ Input
+ 10 2
+ Output
+ Log: Division attempted
+ 5
+ Explanation
+ Valid division → print log then result.
+Sample Test Case 2
+ Input
+ 10 0
+ Output
+ Log: Division attempted
+ ArithmeticException
+ Explanation
+ Divide by zero → exception thrown.
+Sample Test Case 3
+ Input
+ -10 2
+ Output
+ Log: Division attempted
+ -5
+ Explanation
+ Valid negative result.
+--------------------------------------------------------------------------------------------------
+QUESTION 12
+Write a method processString(String str) that uses a finally block to set a resourceReleased flag to true. Return the string length or throw a NullPointerException.
+Input Format
+ A string (literal “null” means actual null)
+Output Format
+ Print length or "NullPointerException", followed by value of resourceReleased.
+Sample Test Case 1
+ Input
+ test
+ Output
+ 4
+ true
+ Explanation
+ Valid string → length printed; finally sets resourceReleased = true.
+Sample Test Case 2
+ Input
+ null
+ Output
+ NullPointerException
+ true
+ Explanation
+ Null string → exception; finally still sets resourceReleased = true.
+Sample Test Case 3
+ Input
+ java
+ Output
+ 4
+ true
+ Explanation
+ Valid string → correct length.
+-------------------------------------------------------------------------------------------------
+try with multi catch
+------------------------QUESTION 1
+Write a method nestedProcess(String str, int index) that uses a nested try block to parse a string and access an array. Return the parsed number if valid, or -1 if any exception occurs.
+Input Format
+ First line: A string
+ Second line: An integer index (-100 to 100)
+Output Format
+ Print the parsed number or -1.
+Sample Test Case 1
+ Input
+ 123
+ 0
+ Output
+ 123
+ Explanation
+ "123" parsed correctly and index 0 is valid.
+Sample Test Case 2
+ Input
+ abc
+ 0
+ Output
+ -1
+ Explanation
+ "abc" cannot be parsed → returns -1.
+Sample Test Case 3
+ Input
+ 789
+ 0
+ Output
+ 789
+ Explanation
+ Valid parsing and valid index.
+------------------------------------------------------------------------------------------------
+QUESTION 2
+Write a method nestedStringArray(String str, int index) that uses a nested try block to check string length and access an array. Return the length if valid, or -1 if any exception occurs.
+Input Format
+ First line: A string ("null" means actual null)
+ Second line: An integer index (-100 to 100)
+Output Format
+ Print string length or -1.
+Sample Test Case 1
+ Input
+ test
+ 0
+ Output
+ 4
+ Explanation
+ "test" length is 4 and index 0 is valid.
+Sample Test Case 2
+ Input
+ null
+ 0
+ Output
+ -1
+ Explanation
+ Null string → length throws exception.
+Sample Test Case 3
+ Input
+ java
+ 1
+ Output
+ -1
+ Explanation
+ Array size = 1 → index 1 is invalid.
+-----------------------------------------------------------------------------------------------
+QUESTION 3
+Write a method nestedAccess(String str, int index) that uses a nested try block with a finally block to set a processed flag. Return the string length or -1 if an exception occurs.
+Input Format
+ First line: A string ("null" means actual null)
+ Second line: An integer index
+Output Format
+ Print processed flag (true) and the result.
+Sample Test Case 1
+ Input
+ test
+ 0
+ Output
+ true
+ 4
+ Explanation
+ Valid string → prints true in finally → result is 4.
+Sample Test Case 2
+ Input
+ null
+ 0
+ Output
+ true
+ -1
+ Explanation
+ Null string → exception → result = -1.
+Sample Test Case 3
+ Input
+ java
+ 1
+ Output
+ true
+ -1
+ Explanation
+ Index 1 invalid → returns -1.
+-----------------------------------------------------------------------------------------------------
+QUESTION 4
+Write a method fullProcess(String str, int divisor) that uses all keywords to parse a string, divide, and log in finally. Return the result or 0 if an exception occurs.
+Input Format
+ First line: A string
+ Second line: An integer divisor
+Output Format
+ Print "Logged" and then the result.
+Sample Test Case 1
+ Input
+ 10
+ 2
+ Output
+ Logged
+ 5
+ Explanation
+ 10 / 2 = 5.
+Sample Test Case 2
+ Input
+ abc
+ 2
+ Output
+ Logged
+ 0
+ Explanation
+ Invalid number → result = 0.
+Sample Test Case 3
+ Input
+ 15
+ 3
+ Output
+ Logged
+ 5
+ Explanation
+ Valid division.
+------------------------------------------------------------------------------------------------------
+QUESTION 5
+Write a method complexOperation(String str, int index) that uses try, catch, throw, throws, finally, and multi-catch to parse a string and access an array. Return the parsed number or -1 if an exception occurs.
+Input Format
+ First line: A string
+ Second line: An integer index
+Output Format
+ Print parsed number or -1.
+Sample Test Case 1
+ Input
+ 123
+ 0
+ Output
+ 123
+ Explanation
+ Valid parsing and index.
+Sample Test Case 2
+ Input
+ abc
+ 0
+ Output
+ -1
+ Explanation
+ Cannot parse → NumberFormatException handled.
+Sample Test Case 3
+ Input
+ 789
+ 1
+ Output
+ -1
+ Explanation
+ Array index invalid.
+-----------------------------------------------------------------------------------------------------
